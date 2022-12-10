@@ -1,0 +1,80 @@
+\documentclass[a4paper, 11pt]{article}
+
+\usepackage[slovene]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{bbm}
+\usepackage{hyperref}
+\usepackage{makeidx}
+
+\title{\textbf{\LARGE{The firefighter problem}}}
+\author{Klara Travnik in Karolina Šavli}
+\date{16.\ november\ 2022}
+
+\begin{document}
+
+\maketitle
+
+\noindent \textbf{OPIS PROBLEMA IN NAČRT DELA} \\
+
+The firefighter problem oziroma problem gasilca obravnava širjenje in omejevanje požara
+na grafu. Na začetku (v času $0$) požar izbruhne na nekem nizu točk. V vsakem časovnem
+koraku se lahko na poljubno še nepogorelo oglišče postavi nov gasilec in požar omeji tako da lahko
+napreduje zgolj na vozlišča, ki še niso zavarovana z gaslici in imajo za soseda vozlišče, ki gori.
+Cilj problema je zajezitev požara, tako da čim več vozlišč ostane nepogorelih. 
+Problem se lahko oplicira na mnoge probleme v realnem življenju, kot je 
+na primer širjenje nalezljive bolezni. \\
+
+\noindent FORMALIZACIJA PROBLEMA \\
+Podan imamo graf z vozlišči $V\left(G\right)$ in povezavami $E\left(G\right)$.
+Število vozlišč in povezav označimo z $n = \left|V\left(G\right)\right|$ in $m = \left|E\left(G\right)\right|$.
+Dano imamo tudi fiksno število gasilcev in sicer $D$. \\
+V času $t = 0$ požar izbruhne v nizu vozlišč $B_{init} \subseteq V$. Pogorela vozlišča
+označimo kot \emph{burnt}.
+V času $t = 1$ se $D$ gasilcev postavi na še nepogorela vozlišča. Slednja vozlišča 
+označimo kot \emph{defended}.
+V naslednjem časovnem koraku se lahko požar razširi zgolj na sosednja vozlišča, ki niso še \emph{defended}.
+Za tem gasilci izbirajo vozlišča in proces se ponavlja dokler požar ni zajezen. \\
+Za dan problem lahko zapišemo celoštevilki linearni program (CLP), pri katerem
+bomo maksimirali število nepogorelih vozlišč:
+\begin{align*}
+    & \text{max} \left|V\right| - \sum_{v \in V}{b_{v, T}} \\
+    & \text{pri pogojih:} \\
+    & b_{v,t} + d_{v,t} - b_{v',t-1} \ge 0 && \forall v \in V ,\, \forall v' \in N(v) ,\, \forall t \in \mathbb{N} \, 1 \le t \le T \\
+    & b_{v,t} + d_{v,t} \le 1 && \forall v \in V ,\, \forall t \in \mathbb{N} ,\, 1 \le t \le T \\
+    & b_{v,t} - b_{v,t-1} \ge 0 && \forall v \in B ,\, \forall t \in \mathbb{N} ,\, 1 \le t \le T \\
+    & d_{v,t} - d_{v,t-1} \ge 0 && \forall v \in B ,\, \forall t \in \mathbb{N} ,\, 1 \le t \le T \\
+    & \sum_{v \in V}{\left( d_{v,t} - d_{v, t-1} \right)} \le D && \forall t \in \mathbb{N} ,\, 1 \le t \le T \\
+    & b_{v,0} = 1 && \forall v \in B_{init} \\
+    & b_{v,0} = 0 && \forall v \in V \ B_{init} \\
+    & d_{v,0} = && \forall v \in V \\
+    & b_{v,t} ,\, d_{v,t} \in \left\{ 0, 1 \right\} && \forall v \in V ,\, \forall t \in \mathbb{N} ,\, 1 \le t \le T \\
+\end{align*}
+
+Obrazložitev spremenljivk in korakov:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\noindent \textbf{VIRI} \\
+
+\bibliographystyle{plain}
+\bibliography{literatura.bib}
+
+\printindex
+
+\end{document}
