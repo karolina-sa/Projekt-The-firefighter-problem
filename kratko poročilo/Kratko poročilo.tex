@@ -50,13 +50,47 @@ bomo maksimirali število nepogorelih vozlišč:
     & d_{v,t} - d_{v,t-1} \ge 0 && \forall v \in B ,\, \forall t \in \mathbb{N} ,\, 1 \le t \le T \\
     & \sum_{v \in V}{\left( d_{v,t} - d_{v, t-1} \right)} \le D && \forall t \in \mathbb{N} ,\, 1 \le t \le T \\
     & b_{v,0} = 1 && \forall v \in B_{init} \\
-    & b_{v,0} = 0 && \forall v \in V \ B_{init} \\
-    & d_{v,0} = && \forall v \in V \\
+    & b_{v,0} = 0 && \forall v \in V \setminus B_{init} \\
+    & d_{v,0} = 0 && \forall v \in V \\
     & b_{v,t} ,\, d_{v,t} \in \left\{ 0, 1 \right\} && \forall v \in V ,\, \forall t \in \mathbb{N} ,\, 1 \le t \le T \\
 \end{align*}
 
 Obrazložitev spremenljivk in korakov:
 
+\begin{itemize} 
+    \item $b_{v,t} = \begin{cases}
+    1, & \text{ če  vozlišče $v$ pogori v času $t$} ,\\
+    0, & \text{ sicer.}
+    \end{cases} $
+
+    \item $d_{v,t} = \begin{cases}
+        1, & \text{ če je vozlišče $v$ rešeno v času $t$} ,\\
+        0, & \text{ sicer.}
+        \end{cases} $
+\end{itemize}
+Imamo torej \textbf{celoštevilski spremenljivki.} \\
+Če je vozlišče $v$ pogorelo v času $t$, je tudi v vseh prihodnjih časih do časa $T$ označeno kot pogorelo. 
+Podobno tudi za vozlišča, ki jih gasilci rešijo; če je rešeno v času $t$, ostane rešeno do konca.
+
+Pogoj $$b_{v,t} + d_{v,t} - b_{v',t-1} \ge 0 \qquad \forall v \in V ,\, \forall v' \in N(v) ,\, \forall t \in \mathbb{N} \, 1 \le t \le T $$
+pove, da če je vozlišče $v'$ pogorelo v času $t-1$, za vse njegove sosede velja, da v času $t$  zagotovo pogorijo, če 
+niso rešeni. Če pa vozlišče $v'$ v času $t-1$ ni pogorelo, je še vseeno možno, da je vozlišče $v$ pogori (če kateri drugi sosedi zagorijo v času $t-1$) ali pa je rešeno.
+
+Pogoj $$b_{v,t} + d_{v,t} \le 1 \qquad \forall v \in V ,\, \forall t \in \mathbb{N} ,\, 1 \le t \le T$$
+pomeni, da ne more vozlišče biti hkrati rešeno in pogorelo.
+
+Pogoja $$b_{v,t} - b_{v,t-1} \ge 0 \qquad \forall v \in B ,\, \forall t \in \mathbb{N} ,\, 1 \le t \le T$$ in 
+$$d_{v,t} - d_{v,t-1} \ge 0 \qquad \forall v \in B ,\, \forall t \in \mathbb{N} ,\, 1 \le t \le T$$
+povesta, da če je bilo vozlišče v nekem času $t$ rešeno ali je pogorelo, je rešeno oz. pogorelo tudi v vseh prihodnjih časih.
+
+
+
+
+
+
+
+
+    
 
 
 
