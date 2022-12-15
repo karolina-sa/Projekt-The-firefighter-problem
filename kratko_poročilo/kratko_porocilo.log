@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.3)  15 DEC 2022 18:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.3)  15 DEC 2022 18:32
 entering extended mode
 **c:/Users/travn/OneDrive/Namizje/Projekt/Projekt-The-firefighter-problem/kratko_poročilo/kratko_porocilo.tex
 (c:/Users/travn/OneDrive/Namizje/Projekt/Projekt-The-firefighter-problem/kratko_poročilo/kratko_porocilo.tex
@@ -488,4 +488,237 @@ File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \tikz@fig@count=\count288
  ("C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex"
 File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfmatrixcurrentrow
+\pgfmatrixcurrentrow=\count289
+\pgfmatrixcurrentcolumn=\count290
+\pgf@matrix@numberofcolumns=\count291
+)
+\tikz@expandcount=\count292
+ ("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex"
+File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)))
+\tcb@waterbox=\box66
+ ("C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcbskinsjigsaw.code.tex"
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '4.30'
+)) ("C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcbbreakable.code.tex"
+Library (tcolorbox): 'tcbbreakable.code.tex' version '4.30'
+\tcb@testbox=\box67
+\tcb@totalupperbox=\box68
+\tcb@totallowerbox=\box69
+) ("C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcbhooks.code.tex"
+Library (tcolorbox): 'tcbhooks.code.tex' version '4.30'
+) ("C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcbtheorems.code.tex"
+Library (tcolorbox): 'tcbtheorems.code.tex' version '4.30'
+) ("C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcbfitting.code.tex"
+Library (tcolorbox): 'tcbfitting.code.tex' version '4.30'
+\tcbfitdim=\dimen257
+\tcb@lowerfitdim=\dimen258
+\tcb@upperfitdim=\dimen259
+\tcb@cur@hbadness=\count293
+) ("C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcbxparse.code.tex"
+Library (tcolorbox): 'tcbxparse.code.tex' version '4.30'
+("C:\Program Files\MiKTeX\tex/latex/l3packages/xparse\xparse.sty" ("C:\Program Files\MiKTeX\tex/latex/l3kernel\expl3.sty"
+Package: expl3 2020-06-18 L3 programming layer (loader) 
+ ("C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdfmode.def"
+File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count294
+\l__pdf_internal_box=\box70
+))
+Package: xparse 2020-05-15 L3 Experimental document command parser
+ ("C:\Program Files\MiKTeX\tex/latex/l3packages/xparse\xparse-generic.tex"
+\l__xparse_current_arg_int=\count295
+\g__xparse_grabber_int=\count296
+\l__xparse_m_args_int=\count297
+\l__xparse_v_nesting_int=\count298
+))) ("C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcblistingsutf8.code.tex"
+Library (tcolorbox): 'tcblistingsutf8.code.tex' version '4.30'
+("C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcblistings.code.tex"
+Library (tcolorbox): 'tcblistings.code.tex' version '4.30'
+("C:\Program Files\MiKTeX\tex/latex/listings\listings.sty"
+\lst@mode=\count299
+\lst@gtempboxa=\box71
+\lst@token=\toks37
+\lst@length=\count300
+\lst@currlwidth=\dimen260
+\lst@column=\count301
+\lst@pos=\count302
+\lst@lostspace=\dimen261
+\lst@width=\dimen262
+\lst@newlines=\count303
+\lst@lineno=\count304
+\lst@maxwidth=\dimen263
+ ("C:\Program Files\MiKTeX\tex/latex/listings\lstmisc.sty"
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count305
+\lst@skipnumbers=\count306
+\lst@framebox=\box72
+) ("C:\Program Files\MiKTeX\tex/latex/listings\listings.cfg"
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+ ("C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcblistingscore.code.tex"
+Library (tcolorbox): 'tcblistingscore.code.tex' version '4.30'
+("C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcbprocessing.code.tex"
+Library (tcolorbox): 'tcbprocessing.code.tex' version '4.30'
+("C:\Program Files\MiKTeX\tex/latex/tools\shellesc.sty"
+Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+))
+\c@tcblisting=\count307
+)) ("C:\Program Files\MiKTeX\tex/latex/listingsutf8\listingsutf8.sty"
+Package: listingsutf8 2019-12-10 v1.5 Allow UTF-8 in listings input (HO)
+ ("C:\Program Files\MiKTeX\tex/generic/stringenc\stringenc.sty"
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+))) ("C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcbexternal.code.tex"
+Library (tcolorbox): 'tcbexternal.code.tex' version '4.30'
+) ("C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcbmagazine.code.tex"
+Library (tcolorbox): 'tcbmagazine.code.tex' version '4.30'
+) ("C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcbvignette.code.tex"
+Library (tcolorbox): 'tcbvignette.code.tex' version '4.30'
+("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryfadings.code.tex"
+File: tikzlibraryfadings.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+ ("C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryfadings.code.tex"
+File: pgflibraryfadings.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))) ("C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcbposter.code.tex"
+Library (tcolorbox): 'tcbposter.code.tex' version '4.30'
+)) (c:/Users\travn\OneDrive\Namizje\Projekt\Projekt-The-firefighter-problem\kratko_poročilo\kratko_porocilo.aux)
+\openout1 = `kratko_porocilo.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 27.
+ ("C:\Program Files\MiKTeX\tex/latex/lm\t1lmr.fd"
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+\AtBeginShipoutBox=\box73
+Package hyperref Info: Link coloring OFF on input line 27.
+ ("C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty"
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+ ("C:\Program Files\MiKTeX\tex/latex/refcount\refcount.sty"
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) ("C:\Program Files\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty"
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count308
+)
+LaTeX Info: Redefining \ref on input line 27.
+LaTeX Info: Redefining \pageref on input line 27.
+LaTeX Info: Redefining \nameref on input line 27.
+ (c:/Users\travn\OneDrive\Namizje\Projekt\Projekt-The-firefighter-problem\kratko_poročilo\kratko_porocilo.out) (c:/Users\travn\OneDrive\Namizje\Projekt\Projekt-The-firefighter-problem\kratko_poročilo\kratko_porocilo.out)
+\@outlinefile=\write6
+\openout6 = `kratko_porocilo.out'.
+
+ ABD: EveryShipout initializing macros ("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count309
+\scratchdimen=\dimen264
+\scratchbox=\box74
+\nofMPsegments=\count310
+\nofMParguments=\count311
+\everyMPshowfont=\toks38
+\MPscratchCnt=\count312
+\MPscratchDim=\dimen265
+\MPnumerator=\count313
+\makeMPintoPDFobject=\count314
+\everyMPtoPDFconversion=\toks39
+) ("C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty"
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+)
+\c@lstlisting=\count315
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 30.
+ ("C:\Program Files\MiKTeX\tex/latex/lm\ot1lmr.fd"
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 30.
+ ("C:\Program Files\MiKTeX\tex/latex/lm\omllmm.fd"
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 30.
+ ("C:\Program Files\MiKTeX\tex/latex/lm\omslmsy.fd"
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 30.
+ ("C:\Program Files\MiKTeX\tex/latex/lm\omxlmex.fd"
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 30.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 30.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 30.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 30.
+ ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 30.
+ ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 34.
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--40
+
+ []
+
+[1
+
+{C:/Users/travn/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 88.
+ ("C:\Program Files\MiKTeX\tex/latex/lm\ts1lmr.fd"
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [2]
+Underfull \hbox (badness 10000) in paragraph at lines 101--104
+
+ []
+
+
+Package hyperref Warning: Composite letter `\textasciicaron+c'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textasciicaron' on input line 106.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--114
+
+ []
+
+(c:/Users\travn\OneDrive\Namizje\Projekt\Projekt-The-firefighter-problem\kratko_poročilo\kratko_porocilo.bbl) [3]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 120.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 120.
+ (c:/Users\travn\OneDrive\Namizje\Projekt\Projekt-The-firefighter-problem\kratko_poročilo\kratko_porocilo.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 120.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 120.
+Package rerunfilecheck Info: File `kratko_porocilo.out' has not changed.
+(rerunfilecheck)             Checksum: 2F27E0A4E3A29F13C7C99002623B43B9;93.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 120.
+ ) 
+Here is how much of TeX's memory you used:
+ 24368 strings out of 480790
+ 490960 string characters out of 2907055
+ 788385 words of memory out of 3000000
+ 39875 multiletter control sequences out of 15000+200000
+ 585281 words of font info for 63 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 64i,14n,103p,1023b,575s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on c:/Users\travn\OneDrive\Namizje\Projekt\Projekt-The-firefighter-problem\kratko_poročilo\kratko_porocilo.pdf (3 pages, 196080 bytes).
+PDF statistics:
+ 136 PDF objects out of 1000 (max. 8388607)
+ 9 named destinations out of 1000 (max. 500000)
+ 173 words of extra memory for PDF output out of 10000 (max. 10000000)
+
