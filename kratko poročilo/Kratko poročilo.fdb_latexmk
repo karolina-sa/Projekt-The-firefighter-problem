@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex Kratko poročilo"] 1670928602 "Kratko poročilo.aux" "Kratko poročilo.bbl" "Kratko poročilo" 1670928798
+["bibtex Kratko poročilo"] 1671114798 "Kratko poročilo.aux" "Kratko poročilo.bbl" "Kratko poročilo" 1671115369
   "C:/Program Files/MiKTeX/bibtex/bst/bibtex/plain.bst" 1291864736 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "Kratko poročilo.aux" 1670928671 804 898867929e824e8361817cca9175747f "pdflatex"
+  "Kratko poročilo.aux" 1671115368 804 898867929e824e8361817cca9175747f "pdflatex"
   "literatura.bib" 1670866883 590 ea3378b0a1637d6285f9c15dc21eeb24 ""
   (generated)
   "Kratko poročilo.bbl"
   "Kratko poročilo.blg"
-["pdflatex"] 1670928670 "c:/Users/travn/OneDrive/Namizje/Projekt/Projekt-The-firefighter-problem/kratko poročilo/Kratko poročilo.tex" "c:/Users/travn/OneDrive/Namizje/Projekt/Projekt-The-firefighter-problem/kratko poročilo/Kratko poročilo.pdf" "Kratko poročilo" 1670928798
+["pdflatex"] 1671115367 "c:/Users/travn/OneDrive/Namizje/Projekt/Projekt-The-firefighter-problem/kratko poročilo/Kratko poročilo.tex" "c:/Users/travn/OneDrive/Namizje/Projekt/Projekt-The-firefighter-problem/kratko poročilo/Kratko poročilo.pdf" "Kratko poročilo" 1671115369
   "C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc" 1254935040 2375 baa924870cfb487815765f9094cf3728 ""
   "C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc" 1254935040 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc" 1254935040 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -115,18 +115,18 @@
   "C:/Program Files/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/travn/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1601719249 10010370 8d0356c292775e2f3b6674002ef97050 ""
   "C:/Users/travn/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1601719213 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
-  "Kratko poročilo.aux" 1670928671 804 898867929e824e8361817cca9175747f "pdflatex"
-  "Kratko poročilo.bbl" 1670928602 52 0eba253fc001332e731e8aba3f23127b "bibtex Kratko poročilo"
+  "Kratko poročilo.aux" 1671115368 804 898867929e824e8361817cca9175747f "pdflatex"
+  "Kratko poročilo.bbl" 1671114798 52 0eba253fc001332e731e8aba3f23127b "bibtex Kratko poročilo"
   "Kratko poročilo.ind" 0 -1 0 ""
-  "Kratko poročilo.out" 1670928671 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "Kratko poročilo.tex" 1670928797 4707 e855c6f26b63e80608281657e2f6b8f9 ""
-  "c:/Users/travn/OneDrive/Namizje/Projekt/Projekt-The-firefighter-problem/kratko poročilo/Kratko poročilo.aux" 1670928671 804 898867929e824e8361817cca9175747f ""
+  "Kratko poročilo.out" 1671115368 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "Kratko poročilo.tex" 1671115366 5170 cf3595ab389ca13d329168c352da8865 ""
+  "c:/Users/travn/OneDrive/Namizje/Projekt/Projekt-The-firefighter-problem/kratko poročilo/Kratko poročilo.aux" 1671115368 804 898867929e824e8361817cca9175747f ""
   "c:/Users/travn/OneDrive/Namizje/Projekt/Projekt-The-firefighter-problem/kratko poročilo/Kratko poročilo.ind" 0 -1 0 ""
-  "c:/Users/travn/OneDrive/Namizje/Projekt/Projekt-The-firefighter-problem/kratko poročilo/Kratko poročilo.tex" 1670928797 4707 e855c6f26b63e80608281657e2f6b8f9 ""
+  "c:/Users/travn/OneDrive/Namizje/Projekt/Projekt-The-firefighter-problem/kratko poročilo/Kratko poročilo.tex" 1671115366 5170 cf3595ab389ca13d329168c352da8865 ""
   (generated)
-  "c:/Users/travn/OneDrive/Namizje/Projekt/Projekt-The-firefighter-problem/kratko poročilo/Kratko poročilo.log"
-  "Kratko poročilo.out"
   "c:/Users/travn/OneDrive/Namizje/Projekt/Projekt-The-firefighter-problem/kratko poročilo/Kratko poročilo.pdf"
+  "Kratko poročilo.out"
   "Kratko poročilo.pdf"
-  "Kratko poročilo.log"
   "Kratko poročilo.aux"
+  "Kratko poročilo.log"
+  "c:/Users/travn/OneDrive/Namizje/Projekt/Projekt-The-firefighter-problem/kratko poročilo/Kratko poročilo.log"

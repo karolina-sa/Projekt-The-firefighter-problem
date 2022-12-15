@@ -39,7 +39,7 @@ V času $t = 1$ se $D$ gasilcev postavi na še nepogorela vozlišča. Slednja vo
 označimo kot \emph{defended}.
 V naslednjem časovnem koraku se lahko požar razširi zgolj na sosednja vozlišča, ki niso še \emph{defended}.
 Za tem gasilci izbirajo vozlišča in proces se ponavlja dokler požar ni zajezen. \\
-Za dan problem lahko zapišemo celoštevilki linearni program (CLP), pri katerem
+Za dan problem lahko zapišemo celoštevilski linearni program (CLP), pri katerem
 bomo maksimirali število nepogorelih vozlišč:
 \begin{align*}
     & \text{max} \left|V\right| - \sum_{v \in V}{b_{v, T}} \\
@@ -51,11 +51,11 @@ bomo maksimirali število nepogorelih vozlišč:
     & \sum_{v \in V}{\left( d_{v,t} - d_{v, t-1} \right)} \le D && \forall t \in \mathbb{N} ,\, 1 \le t \le T \\
     & b_{v,0} = 1 && \forall v \in B_{init} \\
     & b_{v,0} = 0 && \forall v \in V \setminus B_{init} \\
-    & d_{v,0} = 0 && \forall v \in V \\
-    & b_{v,t} ,\, d_{v,t} \in \left\{ 0, 1 \right\} && \forall v \in V ,\, \forall t \in \mathbb{N} ,\, 1 \le t \le T \\
+    & d_{v,0} = 0 && \forall v \in V %\\
+   % & b_{v,t} ,\, d_{v,t} \in \left\{ 0, 1 \right\} && \forall v \in V ,\, \forall t \in \mathbb{N} ,\, 1 \le t \le T \\
 \end{align*}
 
-Obrazložitev spremenljivk in korakov:
+%Obrazložitev spremenljivk in korakov:
 
 \begin{itemize} 
     \item $b_{v,t} = \begin{cases}
@@ -68,20 +68,30 @@ Obrazložitev spremenljivk in korakov:
         0, & \text{ sicer.}
         \end{cases} $
 \end{itemize}
+$$\forall v \in V ,\, \forall t \in \mathbb{N} ,\, 1 \le t \le T$$
 Imamo torej \textbf{celoštevilski spremenljivki.} \\
-Če je vozlišče $v$ pogorelo v času $t$, je tudi v vseh prihodnjih časih do časa $T$ označeno kot pogorelo. 
-Podobno tudi za vozlišča, ki jih gasilci rešijo; če je rešeno v času $t$, ostane rešeno do konca.
+
+Obrazložitev spremenljivk in korakov: \\
 
 Pogoj $$b_{v,t} + d_{v,t} - b_{v',t-1} \ge 0 \qquad \forall v \in V ,\, \forall v' \in N(v) ,\, \forall t \in \mathbb{N} \, 1 \le t \le T $$
 pove, da če je vozlišče $v'$ pogorelo v času $t-1$, za vse njegove sosede velja, da v času $t$  zagotovo pogorijo, če 
-niso rešeni. Če pa vozlišče $v'$ v času $t-1$ ni pogorelo, je še vseeno možno, da je vozlišče $v$ pogori (če kateri drugi sosedi zagorijo v času $t-1$) ali pa je rešeno.
+niso rešeni. Če pa vozlišče $v'$ v času $t-1$ ni pogorelo, je še vseeno možno, da 
+vozlišče $v$ pogori (če kateri drugi sosedi zagorijo v času $t-1$), ali pa je rešeno.
 
 Pogoj $$b_{v,t} + d_{v,t} \le 1 \qquad \forall v \in V ,\, \forall t \in \mathbb{N} ,\, 1 \le t \le T$$
-pomeni, da ne more vozlišče biti hkrati rešeno in pogorelo.
+pomeni, da vozlišče ne more biti hkrati rešeno in pogorelo.
 
 Pogoja $$b_{v,t} - b_{v,t-1} \ge 0 \qquad \forall v \in B ,\, \forall t \in \mathbb{N} ,\, 1 \le t \le T$$ in 
 $$d_{v,t} - d_{v,t-1} \ge 0 \qquad \forall v \in B ,\, \forall t \in \mathbb{N} ,\, 1 \le t \le T$$
-povesta, da če je bilo vozlišče v nekem času $t$ rešeno ali je pogorelo, je rešeno oz. pogorelo tudi v vseh prihodnjih časih.
+povesta, da če je bilo vozlišče v nekem času $t$ rešeno ali je pogorelo, velja za rešeno oz. pogorelo tudi v vseh prihodnjih časih do $T$.
+
+Vsota $$\sum_{v \in V}{\left( d_{v,t} - d_{v, t-1} \right)} \le D \qquad \forall t \in \mathbb{N} ,\, 1 \le t \le T$$
+pogojuje število na novo rešenih vozlišč. V vsakem času $t \in  [1, T]$ je na voljo $D$ gasilcev, vsak lahko reši
+eno vozlišče, torej v vsakem času največ $D$ rešenih.
+
+Začetni pogoji za spremenljivke pa povedo, da so vsa vozlišča iz množice vozlišč $B_{init}$, na 
+katerih se požar začne širiti, v času $0$ označena kot pogorela. 
+Vsa ostala vozlišča pa v času $0$ niso še niti pogorela niti rešena.
 
 
 
