@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1672955184 "c:/Users/Uporabnik/OneDrive/Namizje/SOLA/3.letnik/FINANCNI PRAKTIKUM/Projekt-The-firefighter-problem/poroèilo.tex" "c:/Users/Uporabnik/OneDrive/Namizje/SOLA/3.letnik/FINANCNI PRAKTIKUM/Projekt-The-firefighter-problem/poroèilo.pdf" "poroèilo" 1672955215
+["pdflatex"] 1672955476 "c:/Users/Uporabnik/OneDrive/Namizje/SOLA/3.letnik/FINANCNI PRAKTIKUM/Projekt-The-firefighter-problem/porocilo/porocilo.tex" "c:/Users/Uporabnik/OneDrive/Namizje/SOLA/3.letnik/FINANCNI PRAKTIKUM/Projekt-The-firefighter-problem/porocilo/porocilo.pdf" "porocilo" 1672955484
   "C:/Users/Uporabnik/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1601724376 10022000 a11c3774c617b984c4d4b344912a89d4 ""
   "C:/Users/Uporabnik/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1672955073 82686 2381c3433487640bf26aa76a10db7eb2 ""
   "C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc" 1254935040 2375 baa924870cfb487815765f9094cf3728 ""
@@ -186,8 +186,17 @@
   "C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/tex/latex/trimspaces/trimspaces.sty" 1253165583 1380 971a51b00a14503ddf754cab24c3f209 ""
   "C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1463131981 57049 34128738f682d033422ca125f82e5d62 ""
-  "c:/Users/Uporabnik/OneDrive/Namizje/SOLA/3.letnik/FINANCNI PRAKTIKUM/Projekt-The-firefighter-problem/poroèilo.aux" 1672955188 981 cf8503664714751b49c5284525e98a0b ""
-  "c:/Users/Uporabnik/OneDrive/Namizje/SOLA/3.letnik/FINANCNI PRAKTIKUM/Projekt-The-firefighter-problem/poroèilo.tex" 1672955214 1630 c06268e051283846fb18b59124ba1962 ""
+  "c:/Users/Uporabnik/OneDrive/Namizje/SOLA/3.letnik/FINANCNI PRAKTIKUM/Projekt-The-firefighter-problem/porocilo/porocilo.aux" 1672955484 981 cf8503664714751b49c5284525e98a0b ""
+  "c:/Users/Uporabnik/OneDrive/Namizje/SOLA/3.letnik/FINANCNI PRAKTIKUM/Projekt-The-firefighter-problem/porocilo/porocilo.tex" 1672955214 1630 c06268e051283846fb18b59124ba1962 ""
+  "porocilo.aux" 1672955484 981 cf8503664714751b49c5284525e98a0b "pdflatex"
+  "porocilo.out" 1672955484 99 faa6bfe84dcb199c9463188df5c1deef "pdflatex"
+  "porocilo.tex" 1672955214 1630 c06268e051283846fb18b59124ba1962 ""
+  "porocilo.toc" 1672955484 160 368e1b464fca6dc169c27502e6b53085 "pdflatex"
   (generated)
-  "c:/Users/Uporabnik/OneDrive/Namizje/SOLA/3.letnik/FINANCNI PRAKTIKUM/Projekt-The-firefighter-problem/poroèilo.pdf"
-  "c:/Users/Uporabnik/OneDrive/Namizje/SOLA/3.letnik/FINANCNI PRAKTIKUM/Projekt-The-firefighter-problem/poroèilo.log"
+  "c:/Users/Uporabnik/OneDrive/Namizje/SOLA/3.letnik/FINANCNI PRAKTIKUM/Projekt-The-firefighter-problem/porocilo/porocilo.log"
+  "porocilo.pdf"
+  "c:/Users/Uporabnik/OneDrive/Namizje/SOLA/3.letnik/FINANCNI PRAKTIKUM/Projekt-The-firefighter-problem/porocilo/porocilo.pdf"
+  "porocilo.aux"
+  "porocilo.toc"
+  "porocilo.log"
+  "porocilo.out"

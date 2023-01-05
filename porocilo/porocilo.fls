@@ -1,7 +1,7 @@
-PWD c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem
+PWD c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo
 INPUT C:\Users\Uporabnik\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\poročilo.tex
-OUTPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\poročilo.log
+INPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.tex
+OUTPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.log
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex\latex\base\size12.clo
@@ -242,7 +242,7 @@ INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendl
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryfadings.code.tex
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibraryfadings.code.tex
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibraryfadings.code.tex
-OUTPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\poročilo.pdf
+OUTPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.pdf
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex\latex\tcolorbox\tcbposter.code.tex
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex\latex\subfig\subfig.sty
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex\latex\subfig\subfig.sty
@@ -250,9 +250,9 @@ INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
-INPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\poročilo.aux
-INPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\poročilo.aux
-OUTPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\poročilo.aux
+INPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.aux
+INPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.aux
+OUTPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.aux
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmr.fd
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmr.fd
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr12.tfm
@@ -262,13 +262,13 @@ INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex\latex\refcount\refcou
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex\latex\refcount\refcount.sty
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
-INPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\poročilo.out
-INPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\poročilo.out
-INPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\poročilo.out
-INPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\poročilo.out
-INPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\poročilo.out
-INPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\poročilo.out
-OUTPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\poročilo.out
+INPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.out
+INPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.out
+INPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.out
+INPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.out
+INPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.out
+INPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.out
+OUTPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.out
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
@@ -279,8 +279,8 @@ INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lm
 INPUT C:\Users\Uporabnik\AppData\Local\MiKTeX\pdftex\config\pdftex.map
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr17.tfm
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
-INPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\poročilo.toc
-INPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\poročilo.toc
+INPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.toc
+INPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.toc
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmr.fd
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmr.fd
@@ -310,11 +310,11 @@ INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.f
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-OUTPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\poročilo.toc
+OUTPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.toc
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
-INPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\poročilo.aux
-INPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\poročilo.out
-INPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\poročilo.out
+INPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.aux
+INPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.out
+INPUT c:\Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.out
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-ec.enc
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
 INPUT C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
