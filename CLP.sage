@@ -4,6 +4,23 @@
 # In[ ]:
 
 
+from operator import add
+
+def accumulate(iterable, func=add, initial=None):
+    'Return running totals'
+    it = iter(iterable)
+    total = initial
+    if initial is None:
+        try:
+            total = next(it)
+        except StopIteration:
+            return
+    yield total
+    for element in it:
+        total = func(total, element)
+        yield total
+
+
 def clp(G, B, gasilci, cas):
     ''' vhodni podatki:
          G           izbran graf
@@ -41,42 +58,42 @@ def clp(G, B, gasilci, cas):
 def cas_potreben(G, B, gasilci, cas):
     ''' iz p.solve() pridobi čas po katerem se nič več ne spremeni -> dobimo potreben čas '''
     
-    burnt = clp(G, B, gasilci, cas)[1]
-    defended = clp(G,B,gasilci,cas)[2]
+    t, burnt, defended = clp(G, B, gasilci, cas)
 
-    urej_burnt = sorted(burnt.items(), key=lambda tup: tup[0][1]) #uredi glede na čas po vozliščih naraščajoče
-    urej_defended = sorted(defended.items(), key=lambda tup: tup[0][1]) 
+    urej_burnt = sorted(burnt.items(), key=lambda tup: (tup[0][1], tup[0][0])) #uredi glede na čas po vozliščih naraščajoče
+    urej_defended = sorted(defended.items(), key=lambda tup: (tup[0][1], tup[0][0])) 
 
     vredn_burnt= []
     for i, v in urej_burnt:
-        vredn_burnt.append(v)
+        vredn_burnt.append(Integer(v))
     # pridobim ven vrednosti spremnljivk b v časih in vozliščih naraščajoče
 
     vredn_defended= []
     for i, v in urej_defended:
-        vredn_defended.append(v)
+        vredn_defended.append(Integer(v))
     # pridobim ven vrednosti spremnljivk d v časih in vozliščih naraščajoče
 
     # from itertools import islice
-    from itertools import accumulate
+    #from itertools import accumulate
     dolzina = [len(G)] * (cas +1) # Vrednosti zgrupiram v paketke, v vsakem je toliko vrednosti, kolikor je vozlišč
-    seznami_vrednosti_po_casih_burnt = [vredn_burnt[x - y: x] for x, y in zip(
+    seznami_vrednosti_po_casih_burnt = [tuple(vredn_burnt[x - y: x]) for x, y in zip(
                         accumulate(dolzina), dolzina)]
 
-    seznami_vrednosti_po_casih_defended = [vredn_defended[x - y: x] for x, y in zip(
+    seznami_vrednosti_po_casih_defended = [tuple(vredn_defended[x - y: x]) for x, y in zip(
                         accumulate(dolzina), dolzina)]
 
-    i = 0
-    while seznami_vrednosti_po_casih_burnt[i] != seznami_vrednosti_po_casih_burnt[i+1]:
-        i = i + 1
-    i    
+    #i = 0
+    #while seznami_vrednosti_po_casih_burnt[i] != seznami_vrednosti_po_casih_burnt[i+1]:
+    #    i = i + 1
+    #i    
 
-    j = 0
-    while seznami_vrednosti_po_casih_defended[j] != seznami_vrednosti_po_casih_defended[j+1]:
-        j = j + 1
-    j 
+    #j = 0
+    #while seznami_vrednosti_po_casih_defended[j] != seznami_vrednosti_po_casih_defended[j+1]:
+    #    j = j + 1
+    #j 
 
-    return max(i, j) #večji od časev ko se neha spreminjati
+    #return max(i, j) #večji od časev ko se neha spreminjati
+    return next(i for i in range(len(dolzina)) if all(len(set(l[i:i+2])) == 1 for l in (seznami_vrednosti_po_casih_burnt, seznami_vrednosti_po_casih_defended)))
 
 
 import random

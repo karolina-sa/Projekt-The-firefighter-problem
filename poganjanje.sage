@@ -44,8 +44,10 @@ DATOTEKA = "poganjanje-12-234.csv"
 
 
 import csv
+import random
 import sys
 
+random.seed(42)
 gens = [seznam_naborov_st_vozlisc_cas(seznam_grafov, i, j) for i in (1, 2) for j in (2, 3, 4)]
 
 with open(DATOTEKA, "w") as f:
