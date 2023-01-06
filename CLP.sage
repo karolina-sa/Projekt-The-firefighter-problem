@@ -55,46 +55,41 @@ def clp(G, B, gasilci, cas):
     return [p.solve(), p.get_values(b), p.get_values(d)]
 
 
-def cas_potreben(G, B, gasilci, cas):
+def cas_potreben(G, B, gasilci):
     ''' iz p.solve() pridobi čas po katerem se nič več ne spremeni -> dobimo potreben čas '''
-    
-    t, burnt, defended = clp(G, B, gasilci, cas)
+    #cas = 10 #začetni cas
+    cas = 10
+    while True:
+        t, burnt, defended = clp(G, B, gasilci, cas)
 
-    urej_burnt = sorted(burnt.items(), key=lambda tup: (tup[0][1], tup[0][0])) #uredi glede na čas po vozliščih naraščajoče
-    urej_defended = sorted(defended.items(), key=lambda tup: (tup[0][1], tup[0][0])) 
+        urej_burnt = sorted(burnt.items(), key=lambda tup: tup[0][1]) #uredi glede na čas po vozliščih naraščajoče
+        urej_defended = sorted(defended.items(), key=lambda tup: tup[0][1]) 
 
-    vredn_burnt= []
-    for i, v in urej_burnt:
-        vredn_burnt.append(Integer(v))
-    # pridobim ven vrednosti spremnljivk b v časih in vozliščih naraščajoče
+        vredn_burnt= []
+        for i, v in urej_burnt:
+            vredn_burnt.append(v)
+        # pridobim ven vrednosti spremnljivk b v časih in vozliščih naraščajoče
 
-    vredn_defended= []
-    for i, v in urej_defended:
-        vredn_defended.append(Integer(v))
-    # pridobim ven vrednosti spremnljivk d v časih in vozliščih naraščajoče
+        vredn_defended= []
+        for i, v in urej_defended:
+            vredn_defended.append(v)
+        # pridobim ven vrednosti spremnljivk d v časih in vozliščih naraščajoče
 
-    # from itertools import islice
-    #from itertools import accumulate
-    dolzina = [len(G)] * (cas +1) # Vrednosti zgrupiram v paketke, v vsakem je toliko vrednosti, kolikor je vozlišč
-    seznami_vrednosti_po_casih_burnt = [tuple(vredn_burnt[x - y: x]) for x, y in zip(
-                        accumulate(dolzina), dolzina)]
+        # from itertools import islice
+        from itertools import accumulate
+        dolzina = [len(G)] * (cas +1) # Vrednosti zgrupiram v paketke, v vsakem je toliko vrednosti, kolikor je vozlišč
+        seznami_vrednosti_po_casih_burnt = [tuple(vredn_burnt[x - y: x]) for x, y in zip(
+                            accumulate(dolzina), dolzina)]
 
-    seznami_vrednosti_po_casih_defended = [tuple(vredn_defended[x - y: x]) for x, y in zip(
-                        accumulate(dolzina), dolzina)]
+        seznami_vrednosti_po_casih_defended = [tuple(vredn_defended[x - y: x]) for x, y in zip(
+                            accumulate(dolzina), dolzina)]
 
-    #i = 0
-    #while seznami_vrednosti_po_casih_burnt[i] != seznami_vrednosti_po_casih_burnt[i+1]:
-    #    i = i + 1
-    #i    
-
-    #j = 0
-    #while seznami_vrednosti_po_casih_defended[j] != seznami_vrednosti_po_casih_defended[j+1]:
-    #    j = j + 1
-    #j 
-
-    #return max(i, j) #večji od časev ko se neha spreminjati
-    return next(i for i in range(len(dolzina)) if all(len(set(l[i:i+2])) == 1 for l in (seznami_vrednosti_po_casih_burnt, seznami_vrednosti_po_casih_defended)))
-
+        d = next(i for i in range(len(dolzina)) if all(len(set(l[i:i+2])) == 1 for l in (seznami_vrednosti_po_casih_burnt, seznami_vrednosti_po_casih_defended)))
+        if d < cas:
+            break
+        else:
+            cas += 10
+    return d
 
 import random
 def nakljucno_izberi_vzolisca(graf, n):
@@ -112,8 +107,8 @@ def seznam_naborov_st_vozlisc_cas(seznam_imen_grafov, st_gasilcev, stevilo_vozli
     for graf in seznam_imen_grafov:
         B1 = nakljucno_izberi_vzolisca(graf, stevilo_vozlisc_v_B)
         B2 = nakljucno_izberi_vzolisca(graf, stevilo_vozlisc_v_B)
-        potreben_cas1 = cas_potreben(graf, B1, st_gasilcev, cas)
-        potreben_cas2 = cas_potreben(graf, B2, st_gasilcev, cas)
+        potreben_cas1 = cas_potreben(graf, B1, st_gasilcev)
+        potreben_cas2 = cas_potreben(graf, B2, st_gasilcev)
         #seznam_naborov.append((len(graf), potreben_cas1))
         #seznam_naborov.append((len(graf), potreben_cas2))
         yield (len(graf), graf.name(), st_gasilcev, stevilo_vozlisc_v_B, potreben_cas1, potreben_cas2)
