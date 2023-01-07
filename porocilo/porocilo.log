@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.3)  7 JAN 2023 13:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.3)  7 JAN 2023 13:23
 entering extended mode
 **c:/Users/travn/OneDrive/Namizje/Projekt/Projekt-The-firefighter-problem/porocilo/porocilo.tex
 (c:/Users/travn/OneDrive/Namizje/Projekt/Projekt-The-firefighter-problem/porocilo/porocilo.tex
@@ -754,43 +754,38 @@ Overfull \hbox (5.45888pt too wide) in paragraph at lines 132--132
  []
 
 [5]
-Overfull \hbox (36.3339pt too wide) in paragraph at lines 170--170
-[]        \T1/lmtt/m/n/12 urej_defended = sorted(defended.items(), key=lambda tup: tup[0][1])[] |
+Overfull \hbox (11.63388pt too wide) in paragraph at lines 170--170
+[]    \T1/lmtt/m/n/12 urej_defended = sorted(defended.items(), key=lambda tup: tup[0][1])[] |
  []
 
 
-Overfull \hbox (61.0339pt too wide) in paragraph at lines 175--175
-[]        \T1/lmtt/m/n/12 # pridobim ven vrednosti spremnljivk b v ζsih in vozli產ih nara產ajoκ[] |
+Overfull \hbox (36.3339pt too wide) in paragraph at lines 175--175
+[]    \T1/lmtt/m/n/12 # pridobim ven vrednosti spremnljivk b v ζsih in vozli產ih nara產ajoκ[] |
  []
 
 
-Overfull \hbox (61.0339pt too wide) in paragraph at lines 180--180
-[]        \T1/lmtt/m/n/12 # pridobim ven vrednosti spremnljivk d v ζsih in vozli產ih nara產ajoκ[] |
+Overfull \hbox (36.3339pt too wide) in paragraph at lines 180--180
+[]    \T1/lmtt/m/n/12 # pridobim ven vrednosti spremnljivk d v ζsih in vozli產ih nara產ajoκ[] |
  []
 
 
-Overfull \hbox (122.78394pt too wide) in paragraph at lines 185--185
-[]        \T1/lmtt/m/n/12 # Vrednosti zgrupiram v paketke, v vsakem je toliko vrednosti, kolikor je vozli產[] |
+Overfull \hbox (91.90892pt too wide) in paragraph at lines 185--185
+[]    \T1/lmtt/m/n/12 #Vrednosti zgrupiram v paketke, v vsakem je toliko vrednosti, kolikor je vozli產[] |
  []
 
 
-Overfull \hbox (17.80888pt too wide) in paragraph at lines 186--186
-[]        \T1/lmtt/m/n/12 seznami_vrednosti_po_casih_burnt = [tuple(vredn_burnt[x - y: x])[] |
+Overfull \hbox (30.15889pt too wide) in paragraph at lines 189--189
+[]    \T1/lmtt/m/n/12 seznami_vrednosti_po_casih_defended = [tuple(vredn_defended[x - y: x])[] |
  []
 
 
-Overfull \hbox (54.8589pt too wide) in paragraph at lines 189--189
-[]        \T1/lmtt/m/n/12 seznami_vrednosti_po_casih_defended = [tuple(vredn_defended[x - y: x])[] |
+Overfull \hbox (30.15889pt too wide) in paragraph at lines 192--192
+[]    \T1/lmtt/m/n/12 d = next(i for i in range(len(dolzina)) if all(len(set(l[i:i+2])) == 1[] |
  []
 
 
-Overfull \hbox (54.8589pt too wide) in paragraph at lines 192--192
-[]        \T1/lmtt/m/n/12 d = next(i for i in range(len(dolzina)) if all(len(set(l[i:i+2])) == 1[] |
- []
-
-
-Overfull \hbox (128.95894pt too wide) in paragraph at lines 193--193
-[]        \T1/lmtt/m/n/12 for l in (seznami_vrednosti_po_casih_burnt, seznami_vrednosti_po_casih_defended)))[] |
+Overfull \hbox (104.25893pt too wide) in paragraph at lines 193--193
+[]    \T1/lmtt/m/n/12 for l in (seznami_vrednosti_po_casih_burnt, seznami_vrednosti_po_casih_defended)))[] |
  []
 
 [6]
@@ -812,7 +807,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  64i,5n,103p,1036b,482s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on c:/Users\travn\OneDrive\Namizje\Projekt\Projekt-The-firefighter-problem\porocilo\porocilo.pdf (6 pages, 138413 bytes).
+Output written on c:/Users\travn\OneDrive\Namizje\Projekt\Projekt-The-firefighter-problem\porocilo\porocilo.pdf (6 pages, 138381 bytes).
 PDF statistics:
  126 PDF objects out of 1000 (max. 8388607)
  11 named destinations out of 1000 (max. 500000)

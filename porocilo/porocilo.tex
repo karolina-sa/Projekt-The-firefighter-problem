@@ -157,46 +157,46 @@ ponovimo algoritem. \pagebreak
 Za točen čas, za katerega dobimo končno rešitev (proces se v naslednjih časih ne spreminja),
 sva napisali sledečo funkcijo:
 \begin{verbatim}
-    def cas_potreben(G, B, gasilci):
-    ''' iz p.solve() pridobi čas po katerem se nič več ne spremeni 
-    -> dobimo potreben čas '''
-    #cas = 10 #začetni cas
-    cas = 10
-    while True:
-        t, burnt, defended = clp(G, B, gasilci)
+def cas_potreben(G, B, gasilci):
+''' iz p.solve() pridobi čas po katerem se nič več ne spremeni 
+-> dobimo potreben čas '''
+ #cas = 10 #začetni cas
+cas = 10
+while True:
+    t, burnt, defended = clp(G, B, gasilci)
 
-        urej_burnt = sorted(burnt.items(), key=lambda tup: tup[0][1])
-        #uredi glede na čas po vozliščih naraščajoče
-        urej_defended = sorted(defended.items(), key=lambda tup: tup[0][1]) 
+    urej_burnt = sorted(burnt.items(), key=lambda tup: tup[0][1])
+    #uredi glede na čas po vozliščih naraščajoče
+    urej_defended = sorted(defended.items(), key=lambda tup: tup[0][1]) 
 
-        vredn_burnt= []
-        for i, v in urej_burnt:
-            vredn_burnt.append(v)
-        # pridobim ven vrednosti spremnljivk b v časih in vozliščih naraščajoče
+    vredn_burnt= []
+    for i, v in urej_burnt:
+        vredn_burnt.append(v)
+    # pridobim ven vrednosti spremnljivk b v časih in vozliščih naraščajoče
 
-        vredn_defended= []
-        for i, v in urej_defended:
-            vredn_defended.append(v)
-        # pridobim ven vrednosti spremnljivk d v časih in vozliščih naraščajoče
+    vredn_defended= []
+    for i, v in urej_defended:
+        vredn_defended.append(v)
+    # pridobim ven vrednosti spremnljivk d v časih in vozliščih naraščajoče
 
-        # from itertools import islice
-        from itertools import accumulate
-        dolzina = [len(G)] * (cas +1) 
-        # Vrednosti zgrupiram v paketke, v vsakem je toliko vrednosti, kolikor je vozlišč
-        seznami_vrednosti_po_casih_burnt = [tuple(vredn_burnt[x - y: x]) 
-        for x, y in zip(accumulate(dolzina), dolzina)]
+    # from itertools import islice
+    from itertools import accumulate
+    dolzina = [len(G)] * (cas +1) 
+    #Vrednosti zgrupiram v paketke, v vsakem je toliko vrednosti, kolikor je vozlišč
+    seznami_vrednosti_po_casih_burnt = [tuple(vredn_burnt[x - y: x]) 
+    for x, y in zip(accumulate(dolzina), dolzina)]
 
-        seznami_vrednosti_po_casih_defended = [tuple(vredn_defended[x - y: x]) 
-        for x, y in zip(accumulate(dolzina), dolzina)]
+    seznami_vrednosti_po_casih_defended = [tuple(vredn_defended[x - y: x]) 
+    for x, y in zip(accumulate(dolzina), dolzina)]
 
-        d = next(i for i in range(len(dolzina)) if all(len(set(l[i:i+2])) == 1 
-        for l in (seznami_vrednosti_po_casih_burnt, seznami_vrednosti_po_casih_defended)))
+    d = next(i for i in range(len(dolzina)) if all(len(set(l[i:i+2])) == 1 
+    for l in (seznami_vrednosti_po_casih_burnt, seznami_vrednosti_po_casih_defended)))
         
-        if d < cas:
-            break
-        else:
-            cas += 10
-    return d
+    if d < cas:
+        break
+    else:
+        cas += 10
+return d
 \end{verbatim}
 Funkcija $cas\_potreben$ torej za vsak graf, podmnožico vozlišč $B$ grafa ter določeno število gasilcev
 izračuna potreben čas za rešitev algoritma. Pomembna opomba tukaj je, da ta čas ni enak časovni zahtevnosti
