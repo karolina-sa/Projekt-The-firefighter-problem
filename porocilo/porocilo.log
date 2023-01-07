@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.3)  6 JAN 2023 20:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.3)  7 JAN 2023 13:09
 entering extended mode
 **c:/Users/travn/OneDrive/Namizje/Projekt/Projekt-The-firefighter-problem/porocilo/porocilo.tex
 (c:/Users/travn/OneDrive/Namizje/Projekt/Projekt-The-firefighter-problem/porocilo/porocilo.tex
@@ -712,27 +712,109 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout7 = `porocilo.toc'.
 
  [2] [3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 78.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 78.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 74.
+ ("C:\Program Files\MiKTeX\tex/latex/lm\ts1lmr.fd"
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Underfull \hbox (badness 10000) in paragraph at lines 82--84
+
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 85.
+("C:\Program Files\MiKTeX\tex/latex/lm\t1lmtt.fd"
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Overfull \hbox (5.45888pt too wide) in paragraph at lines 90--90
+[]         \T1/lmtt/m/n/12 gasilci     猓evilo gasilcev, ki v vsakem koraku gasijo po榮r[] |
+ []
+
+
+Overfull \hbox (67.20891pt too wide) in paragraph at lines 92--92
+[]         \T1/lmtt/m/n/12 seznam oblike [猓evilo ζsovnih enot, pogorela/burnt vozli產a po ζsih,[] |
+ []
+
+
+Overfull \hbox (23.98389pt too wide) in paragraph at lines 103--103
+[]        \T1/lmtt/m/n/12 p.set_objective(sum(b[i, cas] for i in G)) # minimiziramo 猓evilo[] |
+ []
+
+
+Overfull \hbox (61.0339pt too wide) in paragraph at lines 108--108
+[]                \T1/lmtt/m/n/12 for j in G[i]: # j je 猓evilka v seznamu vozli產a i, sosed od i[] |
+ []
+
+
+Overfull \hbox (42.5089pt too wide) in paragraph at lines 113--113
+[]            \T1/lmtt/m/n/12 p.add_constraint(sum((d[i,t] - d[i,t-1]) for i in G) <= gasilci)[] |
+ []
+
+[4]
+Overfull \hbox (5.45888pt too wide) in paragraph at lines 129--129
+[]        \T1/lmtt/m/n/12 # sosedi od pogorelih vozli產 so lahko pogoreli ali za產iteni.[] |
+ []
+
+[5]
+Overfull \hbox (36.3339pt too wide) in paragraph at lines 167--167
+[]        \T1/lmtt/m/n/12 urej_defended = sorted(defended.items(), key=lambda tup: tup[0][1])[] |
+ []
+
+
+Overfull \hbox (61.0339pt too wide) in paragraph at lines 172--172
+[]        \T1/lmtt/m/n/12 # pridobim ven vrednosti spremnljivk b v ζsih in vozli產ih nara產ajoκ[] |
+ []
+
+
+Overfull \hbox (61.0339pt too wide) in paragraph at lines 177--177
+[]        \T1/lmtt/m/n/12 # pridobim ven vrednosti spremnljivk d v ζsih in vozli產ih nara產ajoκ[] |
+ []
+
+
+Overfull \hbox (122.78394pt too wide) in paragraph at lines 182--182
+[]        \T1/lmtt/m/n/12 # Vrednosti zgrupiram v paketke, v vsakem je toliko vrednosti, kolikor je vozli產[] |
+ []
+
+
+Overfull \hbox (17.80888pt too wide) in paragraph at lines 183--183
+[]        \T1/lmtt/m/n/12 seznami_vrednosti_po_casih_burnt = [tuple(vredn_burnt[x - y: x])[] |
+ []
+
+
+Overfull \hbox (54.8589pt too wide) in paragraph at lines 186--186
+[]        \T1/lmtt/m/n/12 seznami_vrednosti_po_casih_defended = [tuple(vredn_defended[x - y: x])[] |
+ []
+
+
+Overfull \hbox (54.8589pt too wide) in paragraph at lines 189--189
+[]        \T1/lmtt/m/n/12 d = next(i for i in range(len(dolzina)) if all(len(set(l[i:i+2])) == 1[] |
+ []
+
+
+Overfull \hbox (128.95894pt too wide) in paragraph at lines 190--190
+[]        \T1/lmtt/m/n/12 for l in (seznami_vrednosti_po_casih_burnt, seznami_vrednosti_po_casih_defended)))[] |
+ []
+
+[6]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 210.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 210.
  (c:/Users\travn\OneDrive\Namizje\Projekt\Projekt-The-firefighter-problem\porocilo\porocilo.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 78.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 78.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 210.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 210.
 Package rerunfilecheck Info: File `porocilo.out' has not changed.
-(rerunfilecheck)             Checksum: FAA6BFE84DCB199C9463188DF5C1DEEF;99.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 78.
+(rerunfilecheck)             Checksum: 0310070A82EB8D12B16D8E965EC06218;162.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 210.
  ) 
 Here is how much of TeX's memory you used:
- 25607 strings out of 480790
- 514236 string characters out of 2907055
- 806110 words of memory out of 3000000
- 41121 multiletter control sequences out of 15000+200000
- 569680 words of font info for 50 fonts, out of 3000000 for 9000
+ 25691 strings out of 480790
+ 515786 string characters out of 2907055
+ 812111 words of memory out of 3000000
+ 41190 multiletter control sequences out of 15000+200000
+ 580615 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,5n,103p,1036b,336s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr12.pfb>
-Output written on c:/Users\travn\OneDrive\Namizje\Projekt\Projekt-The-firefighter-problem\porocilo\porocilo.pdf (3 pages, 68679 bytes).
+ 64i,5n,103p,1036b,482s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
+Output written on c:/Users\travn\OneDrive\Namizje\Projekt\Projekt-The-firefighter-problem\porocilo\porocilo.pdf (6 pages, 138392 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 7 named destinations out of 1000 (max. 500000)
- 173 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 126 PDF objects out of 1000 (max. 8388607)
+ 11 named destinations out of 1000 (max. 500000)
+ 181 words of extra memory for PDF output out of 10000 (max. 10000000)
 
