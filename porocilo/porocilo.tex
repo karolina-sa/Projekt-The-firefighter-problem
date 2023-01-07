@@ -85,6 +85,7 @@ ki jih gasilci niso uspeli rešiti. Proces se ponavlja dokler požar ni zajezen.
 Opisani problem sva v programu CoCalc, v programskem jeziku SageMaths 
 zapisali kot \textbf{celoštevilski linearni program (CLP)}: \\
 
+\overfullrule=0pt
 \begin{verbatim}
     def clp(G, B, gasilci):
     ''' vhodni podatki:
@@ -182,7 +183,8 @@ while True:
     # from itertools import islice
     from itertools import accumulate
     dolzina = [len(G)] * (cas +1) 
-    #Vrednosti zgrupiram v paketke, v vsakem je toliko vrednosti, kolikor je vozlišč
+    #Vrednosti zgrupiram v paketke, v vsakem je toliko vrednosti, 
+    kolikor je vozlišč
     seznami_vrednosti_po_casih_burnt = [tuple(vredn_burnt[x - y: x]) 
     for x, y in zip(accumulate(dolzina), dolzina)]
 
