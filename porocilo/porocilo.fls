@@ -312,10 +312,10 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 OUTPUT c:\Users\travn\OneDrive\Namizje\Projekt\Projekt-The-firefighter-problem\porocilo\porocilo.toc
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmri12.tfm
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\ts1lmr.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\ts1lmr.fd
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ts1-lmr12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmri12.tfm
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmtt.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmtt.fd
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmtt12.tfm
