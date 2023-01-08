@@ -2,4 +2,8 @@
 \contentsline {section}{\numberline {1}Opis in formulacija problema}{4}{section.1}%
 \contentsline {section}{\numberline {2}Vizualizacija problema}{8}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Predstavitev funkcij za barvanje}{8}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Primer na petersonoven grafu}{8}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.2}Primer na petersonovem grafu}{8}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Testiranje programa glede na število vozlišč grafa}{11}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Potek dela}{11}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}1 gasilec \& 2, 3 ali 4 izvori požara}{12}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}2 gasilca \& 2, 3 ali 4 izvori požara}{12}{subsection.3.3}%

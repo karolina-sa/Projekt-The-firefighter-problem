@@ -39,9 +39,9 @@ Finančna matematika 1.~stopnja}
 \vfill
 
 \begin{center}{\large
-Karolina Šavli, Klara Travnik\\[5mm]
+Projekt pri predmetu Finančni praktikum\\[5mm]
 {\Huge \bf The firefighter problem}\\[5mm]
-Projekt pri predmetu Finančni praktikum\\[1cm]}
+Karolina Šavli, Klara Travnik\\[1cm]}
 \end{center}
 \vfill
 
@@ -215,6 +215,8 @@ algoritma. Potreben čas predstavlja število časovnih enot v procesu širjenja
 \noindent Za lažjo predstavo poteka problema sva napisali funkcijo $barvanje\_po\_korakih$, ki z barvanjem
 vozlišč grafa prikazuje širjenje in zajezevanje požara. Koda funkcije je naslednja:
 
+\begin{figure}[h]
+\scriptsize
 \begin{verbatim}
     def barvanje_v_casu_t(G, B, gasilci, t):
         ''' pomožna funkcija barvanje_v_casu_t izriše graf in pobarva vozlišča v 
@@ -238,13 +240,14 @@ vozlišč grafa prikazuje širjenje in zajezevanje požara. Koda funkcije je nas
         print("Število potrebnih časovnih korakov: " + str(time))
         for t in range(0, time + 1):
             print("Situacija v času " + str(t) + ":")
-            barvanje_v_casu_t(G, B, gasilci, t)    
+            barvanje_v_casu_t(G, B, gasilci, t) 
 \end{verbatim}
+\end{figure}
 
 \noindent Funkcija $barvanje\_po\_korakih$ deluje s pomočjo funkcije $barvanje\_v\_casu\_t$, ki predstavlja
 situacijo v času t. Funkcijo si za lažje razumevanje poglejmo na konkretnem primeru.
 
-\subsection{Primer na petersonoven grafu}
+\subsection{Primer na petersonovem grafu}
 \noindent Potek problema in barvanje predstavimo na pretersonovem grafu. \\ 
 Funkcija $barvanje\_po\_korakih$ zahteva tri argumente
 in sicer graf $G$, množico izvornih vozlišč $B$ ter $gasilci$, ki predstavlja število gasilcev, ki 
@@ -300,6 +303,97 @@ Nato pa nam izriše situacijo v vsakem časovnem koraku:
     Z grafičnega prikaza je razvidno, da se požar ne more več razširiti naprej. Edino nepogorlo
     in nezaščiteno vozlišče je vozlišče $9$.
 \end{itemize}
+
+\pagebreak
+
+% ================================================================================================
+
+\section{Testiranje programa glede na število vozlišč grafa}
+
+\subsection{Potek dela}
+
+Za izvedbo testiranja programa sva spisali funkcijo $seznam\_navorov\_st\_vozlisc\_cas$, ki
+kot argumente sprjme $seznam\_imen\_grafov$, $st\_gasilcev$ ter $stevilo\_vozlic\_v\_B$. Tekom
+funkcije se sprehodimo čez $seznam\_imen\_grafov$ (seznam poljubnih imen grafov) in sestavljamo 
+nov seznam sestavljen iz naborov oblike  
+$$\left( \text{število vozlišč grafa}, \text{potreben čas reševanje problema na grafu} \right).$$
+Koda funkcije:
+
+\begin{figure}[h]
+\scriptsize
+\begin{verbatim}
+    import random
+    def nakljucno_izberi_vzolisca(graf, n):
+        ''' funkcija naključno izbere n vozlišč iz grafa graf '''
+        return random.sample(list(graf), n)
+
+    def seznam_naborov_st_vozlisc_cas(seznam_imen_grafov, st_gasilcev, stevilo_vozlisc_v_B):
+        ''' funkcija, ki sprejme seznam v katerem so imena grafov, število gasilcev ter 
+            število vozlišč, ki jih želimo v začetni množici B.
+            Vrne pa seznam naborov oblike (število vozlišč, potreben čas reševanje problema)'''
+        
+        # sprehodimo se po seznam_imen_grafov in sestavljamo nabor:
+        seznam_naborov = []
+        for graf in seznam_imen_grafov:
+            B1 = nakljucno_izberi_vzolisca(graf, stevilo_vozlisc_v_B)
+            B2 = nakljucno_izberi_vzolisca(graf, stevilo_vozlisc_v_B)
+            potreben_cas1 = cas_potreben(graf, B1, st_gasilcev)
+            potreben_cas2 = cas_potreben(graf, B2, st_gasilcev)
+            seznam_naborov.append((len(graf), potreben_cas1))
+            seznam_naborov.append((len(graf), potreben_cas2))
+        
+        return seznam_naborov
+\end{verbatim}
+\end{figure}
+
+\noindent V funkciji sva si pomagali s funkcijo $nakljucno\_izberi\_vzolisca$, ki kot 
+argument sprejme poljuben graf $graf$ ter poljubno pozitivno število $n$. Funkcija vrne 
+$n$ poljubnih vozlišč $grafa$. Funkcijo sva uporabili pri generiranju množice začetnih 
+vozlišč $B$. Razlog pa je, da požar lahko izbruhne kjerkoli. \\
+
+\noindent Funkcijo $seznam\_navorov\_st\_vozlisc\_cas$ sva izvedli na zelo velikem seznamu grafov. Grafi seznama
+so bili različnih velikosti in oblik. Obravnavo rezultatov sva razdelili glede 
+na spremenljivki $st\_gasilcev$ ter $stevilo\_vozlic\_v\_B$. \\
+Ločili sva primera:
+\begin{itemize}
+    \item $st\_gasilcev = 1$ in $stevilo\_vozlic\_v\_B = \left\{ 2, \, 3, \, 4 \right\}$
+    \item $st\_gasilcev = 2$ in $stevilo\_vozlic\_v\_B = \left\{ 2, \, 3, \, 4 \right\}$
+\end{itemize}
+
+\noindent Iz dobljenih podatkov sva nato sestavili \emph{.csv} datoteko. Podatke sva vizualzirali s pomočjo \emph{Python} knjižnice \emph{pandas}. 
+V grobem sva predstavlili odvisnost časa reševanje problema od števila vozlišč grafa. Število vozlišč obravnanih grafov
+je med $6$ in $77$. Grafične prikaze sva nazadnje nadgradili še z linarno regresijo. 
+
+\pagebreak
+
+\subsection{1 gasilec \& 2, 3 ali 4 izvori požara}
+
+\begin{figure}[!htb]
+    \minipage{0.32\textwidth}
+      \includegraphics[width=\linewidth]{plot12}
+    \endminipage\hfill
+    \minipage{0.32\textwidth}
+      \includegraphics[width=\linewidth]{plot13}
+    \endminipage\hfill
+    \minipage{0.32\textwidth}
+      \includegraphics[width=\linewidth]{plot14}
+    \endminipage
+\end{figure}
+    
+
+\subsection{2 gasilca \& 2, 3 ali 4 izvori požara}
+
+\begin{figure}[!htb]
+    \minipage{0.32\textwidth}
+      \includegraphics[width=\linewidth]{plot22}
+    \endminipage\hfill
+    \minipage{0.32\textwidth}
+      \includegraphics[width=\linewidth]{plot23}
+    \endminipage\hfill
+    \minipage{0.32\textwidth}
+      \includegraphics[width=\linewidth]{plot24}
+    \endminipage
+\end{figure}
 
 
 
