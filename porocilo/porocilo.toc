@@ -7,3 +7,4 @@
 \contentsline {subsection}{\numberline {3.1}Potek dela}{11}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}1 gasilec \& 2, 3 ali 4 izvori požara}{12}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}2 gasilca \& 2, 3 ali 4 izvori požara}{12}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Primerjava primerov z 1 gasilcem in 2 gasilci}{13}{subsection.3.4}%

@@ -368,6 +368,9 @@ je med $6$ in $77$. Grafične prikaze sva nazadnje nadgradili še z linarno regr
 
 \subsection{1 gasilec \& 2, 3 ali 4 izvori požara}
 
+Za parametre $st\_gasilcev = 1$ in $stevilo\_vozlic\_v\_B = \left\{ 2, \, 3, \, 4 \right\}$ sva dobile
+naslednje grafične prikaze:
+
 \begin{figure}[!htb]
     \minipage{0.32\textwidth}
       \includegraphics[width=\linewidth]{plot12}
@@ -380,8 +383,25 @@ je med $6$ in $77$. Grafične prikaze sva nazadnje nadgradili še z linarno regr
     \endminipage
 \end{figure}
     
+\noindent Dodatno sva izračunali še povprečno število potrebnih časovnih korakov:
+\begin{itemize}
+    \item 1 gasilec in 2 naključna izvora požara: $4.304$,
+    \item 1 gasilec in 3 naključni izvora požara: $3.993$,
+    \item 1 gasilec in 4 naključni izvora požara: $3.645$.
+\end{itemize}
+
+\noindent Tako iz grafov kot tudi iz izračuna je razvidno, da se število potrebnih časovnih korakov
+z višanjem števila izvorov požara veča. To seveda ni presenetljivo, saj bo $1$ gasilec zagotovo
+potreboval več časa za omejitev $4$ izvorov požara, kot na primer $2$ izvorov požara. \\
+
+\noindent Komentar: opazimo, da so dobljena povprečja precej majhna. Slednje si lahko razlagamo z dejstvom, da je bilo v
+seznamu grafov več grafov z manjšim številom vozlišč (manj kot $40$). Slednji grafi pa
+za zaključek problema potrebujejo manj časa kot grafi z večjim število vozlišč. 
 
 \subsection{2 gasilca \& 2, 3 ali 4 izvori požara}
+
+Za parametre $st\_gasilcev = 2$ in $stevilo\_vozlic\_v\_B = \left\{ 2, \, 3, \, 4 \right\}$ sva dobile
+naslednje grafične prikaze:
 
 \begin{figure}[!htb]
     \minipage{0.32\textwidth}
@@ -395,7 +415,22 @@ je med $6$ in $77$. Grafične prikaze sva nazadnje nadgradili še z linarno regr
     \endminipage
 \end{figure}
 
+\pagebreak
 
+\noindent Dodatno sva izračunali še povprečno število potrebnih časovnih korakov:
+\begin{itemize}
+    \item 2 gasilca in 2 naključna izvora požara: $3.121$,
+    \item 2 gasilca in 3 naključni izvora požara: $3.151$,
+    \item 2 gasilca in 4 naključni izvora požara: $3.164$.
+\end{itemize}
+
+\noindent V tem primeru pridemo do podobnega sklepa kot v prejšnjem (1 gasilec omejuje požar):
+število potrebnih časovnih korakov se z višanjem števila izvorov požara veča. 
+
+\subsection{Primerjava primerov z 1 gasilcem in 2 gasilci}
+Primerjamo grafe in razultate, ki smo jih dobili v prejšnjih dveh primerih.
+Z grafa in tudi iz povprečji je opazno, da je število potrebnih časovnih enot manjše v primeru, ko
+imamo $2$ gasilca, saj večje število gasilcev prej omeji požar. 
 
 % ================================================================================================
 

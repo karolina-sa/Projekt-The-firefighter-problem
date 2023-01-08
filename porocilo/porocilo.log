@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.3)  8 JAN 2023 13:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.3)  8 JAN 2023 14:14
 entering extended mode
 **"c:/Users/Uporabnik/OneDrive/Namizje/SOLA/3.letnik/FINANCNI PRAKTIKUM/Projekt-The-firefighter-problem/porocilo/porocilo.tex"
 ("c:/Users/Uporabnik/OneDrive/Namizje/SOLA/3.letnik/FINANCNI PRAKTIKUM/Projekt-The-firefighter-problem/porocilo/porocilo.tex"
@@ -790,17 +790,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 261--265
  []
 
 [8]
-<./slike/peterson0.png, id=128, 281.853pt x 268.8444pt>
+<./slike/peterson0.png, id=133, 281.853pt x 268.8444pt>
 File: ./slike/peterson0.png Graphic file (type png)
 <use ./slike/peterson0.png>
 Package pdftex.def Info: ./slike/peterson0.png  used on input line 276.
 (pdftex.def)             Requested size: 140.92615pt x 134.42188pt.
-<./slike/peterson1.png, id=130, 281.853pt x 268.8444pt>
+<./slike/peterson1.png, id=135, 281.853pt x 268.8444pt>
 File: ./slike/peterson1.png Graphic file (type png)
 <use ./slike/peterson1.png>
 Package pdftex.def Info: ./slike/peterson1.png  used on input line 282.
 (pdftex.def)             Requested size: 140.92615pt x 134.42188pt.
-<./slike/peterson2.png, id=131, 281.853pt x 268.8444pt>
+<./slike/peterson2.png, id=136, 281.853pt x 268.8444pt>
 File: ./slike/peterson2.png Graphic file (type png)
 <use ./slike/peterson2.png>
 Package pdftex.def Info: ./slike/peterson2.png  used on input line 288.
@@ -831,58 +831,63 @@ Underfull \hbox (badness 10000) in paragraph at lines 349--353
  []
 
 [11]
-<./slike/plot12.png, id=148, 410.4936pt x 328.8285pt>
+<./slike/plot12.png, id=153, 410.4936pt x 328.8285pt>
 File: ./slike/plot12.png Graphic file (type png)
 <use ./slike/plot12.png>
-Package pdftex.def Info: ./slike/plot12.png  used on input line 373.
+Package pdftex.def Info: ./slike/plot12.png  used on input line 376.
 (pdftex.def)             Requested size: 136.57634pt x 109.40685pt.
-<./slike/plot13.png, id=149, 396.0396pt x 328.8285pt>
+<./slike/plot13.png, id=154, 396.0396pt x 328.8285pt>
 File: ./slike/plot13.png Graphic file (type png)
 <use ./slike/plot13.png>
-Package pdftex.def Info: ./slike/plot13.png  used on input line 376.
+Package pdftex.def Info: ./slike/plot13.png  used on input line 379.
 (pdftex.def)             Requested size: 136.57634pt x 113.39577pt.
-<./slike/plot14.png, id=150, 396.0396pt x 328.8285pt>
+<./slike/plot14.png, id=155, 396.0396pt x 328.8285pt>
 File: ./slike/plot14.png Graphic file (type png)
 <use ./slike/plot14.png>
-Package pdftex.def Info: ./slike/plot14.png  used on input line 379.
+Package pdftex.def Info: ./slike/plot14.png  used on input line 382.
 (pdftex.def)             Requested size: 136.57634pt x 113.39577pt.
-<./slike/plot22.png, id=151, 410.4936pt x 328.8285pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 393--396
+
+ []
+
+<./slike/plot22.png, id=156, 410.4936pt x 328.8285pt>
 File: ./slike/plot22.png Graphic file (type png)
 <use ./slike/plot22.png>
-Package pdftex.def Info: ./slike/plot22.png  used on input line 388.
+Package pdftex.def Info: ./slike/plot22.png  used on input line 408.
 (pdftex.def)             Requested size: 136.57634pt x 109.40685pt.
-<./slike/plot23.png, id=152, 396.0396pt x 328.8285pt>
+<./slike/plot23.png, id=157, 396.0396pt x 328.8285pt>
 File: ./slike/plot23.png Graphic file (type png)
 <use ./slike/plot23.png>
-Package pdftex.def Info: ./slike/plot23.png  used on input line 391.
+Package pdftex.def Info: ./slike/plot23.png  used on input line 411.
 (pdftex.def)             Requested size: 136.57634pt x 113.39577pt.
-<./slike/plot24.png, id=153, 396.0396pt x 328.8285pt>
+<./slike/plot24.png, id=158, 396.0396pt x 328.8285pt>
 File: ./slike/plot24.png Graphic file (type png)
 <use ./slike/plot24.png>
-Package pdftex.def Info: ./slike/plot24.png  used on input line 394.
+Package pdftex.def Info: ./slike/plot24.png  used on input line 414.
 (pdftex.def)             Requested size: 136.57634pt x 113.39577pt.
- [12 <./slike/plot12.png> <./slike/plot13.png> <./slike/plot14.png> <./slike/plot22.png> <./slike/plot23.png> <./slike/plot24.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 407.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 407.
+[12 <./slike/plot12.png> <./slike/plot13.png> <./slike/plot14.png> <./slike/plot22.png> <./slike/plot23.png> <./slike/plot24.png>] [13]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 442.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 442.
  ("c:/Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 407.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 407.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 442.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 442.
 Package rerunfilecheck Info: File `porocilo.out' has not changed.
-(rerunfilecheck)             Checksum: F4944C44EA759A82B6D588D877D41858;610.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 407.
+(rerunfilecheck)             Checksum: 2CD4D7303E4BB997A25E4288C56FC016;704.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 442.
  ) 
 Here is how much of TeX's memory you used:
- 25839 strings out of 480790
- 528452 string characters out of 2895425
+ 25842 strings out of 480790
+ 528489 string characters out of 2895425
  813472 words of memory out of 3000000
- 41320 multiletter control sequences out of 15000+200000
+ 41321 multiletter control sequences out of 15000+200000
  580936 words of font info for 56 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,8n,103p,1067b,482s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt8.pfb>
-Output written on "c:/Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.pdf" (12 pages, 356027 bytes).
+Output written on "c:/Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.pdf" (13 pages, 359383 bytes).
 PDF statistics:
- 207 PDF objects out of 1000 (max. 8388607)
- 26 named destinations out of 1000 (max. 500000)
- 266 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 217 PDF objects out of 1000 (max. 8388607)
+ 28 named destinations out of 1000 (max. 500000)
+ 274 words of extra memory for PDF output out of 10000 (max. 10000000)
 
