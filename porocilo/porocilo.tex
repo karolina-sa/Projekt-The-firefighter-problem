@@ -13,7 +13,6 @@
 \usepackage[most]{tcolorbox}
 \usepackage{graphicx,subfig}
 
-
 \usepackage{graphicx}
 \graphicspath{{./slike/}} 
 
@@ -85,7 +84,7 @@ ki jih gasilci niso uspeli rešiti. Proces se ponavlja dokler požar ni zajezen.
 Opisani problem sva v programu CoCalc, v programskem jeziku SageMaths 
 zapisali kot \textbf{celoštevilski linearni program (CLP)}: \\
 
-\overfullrule=0pt
+\begin{scriptsize}
 \begin{verbatim}
     def clp(G, B, gasilci):
     ''' vhodni podatki:
@@ -145,6 +144,7 @@ zapisali kot \textbf{celoštevilski linearni program (CLP)}: \\
         
     return [k, l, m]
 \end{verbatim}
+\end{scriptsize}
 
 CLP sva želeli zastaviti tako, da v argumentu funkcije ni potrebno nastaviti časa,
 za katerega naj bi bil CLP končan. Zato sva nastavili nek začeten čas $cas = 10,$ za katerga 
@@ -153,53 +153,57 @@ torej, ali je vrednost spremenljivk v zadnji časovni enoti ustrezna.
 To pomeni, da za vsako vozlišče, ki je zgorelo, velja, da je vsako sosednje
 vozlišče le-tega tudi zgorelo, ali pa bilo rešeno. V nasprotnem primeru 
 proces še ne bi bil končen, in čas $cas$ se nastavi na večjo vrednost ter
-ponovimo algoritem. \pagebreak
+ponovimo algoritem. 
 
 Za točen čas, za katerega dobimo končno rešitev (proces se v naslednjih časih ne spreminja),
 sva napisali sledečo funkcijo:
+
+\begin{scriptsize}
 \begin{verbatim}
-def cas_potreben(G, B, gasilci):
-''' iz p.solve() pridobi čas po katerem se nič več ne spremeni 
--> dobimo potreben čas '''
- #cas = 10 #začetni cas
-cas = 10
-while True:
-    t, burnt, defended = clp(G, B, gasilci)
+    def cas_potreben(G, B, gasilci):
+        ''' iz p.solve() pridobi čas po katerem se nič več ne spremeni 
+        -> dobimo potreben čas '''
+        #cas = 10 #začetni cas
+        cas = 10
+        while True:
+        t, burnt, defended = clp(G, B, gasilci)
 
-    urej_burnt = sorted(burnt.items(), key=lambda tup: tup[0][1])
-    #uredi glede na čas po vozliščih naraščajoče
-    urej_defended = sorted(defended.items(), key=lambda tup: tup[0][1]) 
+        urej_burnt = sorted(burnt.items(), key=lambda tup: tup[0][1])
+        #uredi glede na čas po vozliščih naraščajoče
+        urej_defended = sorted(defended.items(), key=lambda tup: tup[0][1]) 
 
-    vredn_burnt= []
-    for i, v in urej_burnt:
-        vredn_burnt.append(v)
-    # pridobim ven vrednosti spremnljivk b v časih in vozliščih naraščajoče
+        vredn_burnt= []
+        for i, v in urej_burnt:
+            vredn_burnt.append(v)
+        # pridobim ven vrednosti spremnljivk b v časih in vozliščih naraščajoče
 
-    vredn_defended= []
-    for i, v in urej_defended:
-        vredn_defended.append(v)
-    # pridobim ven vrednosti spremnljivk d v časih in vozliščih naraščajoče
+        vredn_defended= []
+        for i, v in urej_defended:
+            vredn_defended.append(v)
+        # pridobim ven vrednosti spremnljivk d v časih in vozliščih naraščajoče
 
-    # from itertools import islice
-    from itertools import accumulate
-    dolzina = [len(G)] * (cas +1) 
-    #Vrednosti zgrupiram v paketke, v vsakem je toliko vrednosti, 
-    kolikor je vozlišč
-    seznami_vrednosti_po_casih_burnt = [tuple(vredn_burnt[x - y: x]) 
-    for x, y in zip(accumulate(dolzina), dolzina)]
+        # from itertools import islice
+        from itertools import accumulate
+        dolzina = [len(G)] * (cas +1) 
+        #Vrednosti zgrupiram v paketke, v vsakem je toliko vrednosti, 
+        kolikor je vozlišč
+        seznami_vrednosti_po_casih_burnt = [tuple(vredn_burnt[x - y: x]) 
+        for x, y in zip(accumulate(dolzina), dolzina)]
 
-    seznami_vrednosti_po_casih_defended = [tuple(vredn_defended[x - y: x]) 
-    for x, y in zip(accumulate(dolzina), dolzina)]
+        seznami_vrednosti_po_casih_defended = [tuple(vredn_defended[x - y: x]) 
+        for x, y in zip(accumulate(dolzina), dolzina)]
 
-    d = next(i for i in range(len(dolzina)) if all(len(set(l[i:i+2])) == 1 
-    for l in (seznami_vrednosti_po_casih_burnt, seznami_vrednosti_po_casih_defended)))
-        
-    if d < cas:
-        break
-    else:
-        cas += 10
-return d
+        d = next(i for i in range(len(dolzina)) if all(len(set(l[i:i+2])) == 1 
+        for l in (seznami_vrednosti_po_casih_burnt, seznami_vrednosti_po_casih_defended)))
+            
+        if d < cas:
+            break
+        else:
+            cas += 10
+        return d
 \end{verbatim}
+\end{scriptsize}
+
 Funkcija $cas\_potreben$ torej za vsak graf, podmnožico vozlišč $B$ grafa ter določeno število gasilcev
 izračuna potreben čas za rešitev algoritma. Pomembna opomba tukaj je, da ta čas ni enak časovni zahtevnosti
 algoritma. Potreben čas predstavlja število časovnih enot v procesu širjenja požara in reševanju vozlišč.
@@ -215,8 +219,7 @@ algoritma. Potreben čas predstavlja število časovnih enot v procesu širjenja
 \noindent Za lažjo predstavo poteka problema sva napisali funkcijo $barvanje\_po\_korakih$, ki z barvanjem
 vozlišč grafa prikazuje širjenje in zajezevanje požara. Koda funkcije je naslednja:
 
-\begin{figure}[h]
-\scriptsize
+\begin{scriptsize}
 \begin{verbatim}
     def barvanje_v_casu_t(G, B, gasilci, t):
         ''' pomožna funkcija barvanje_v_casu_t izriše graf in pobarva vozlišča v 
@@ -242,7 +245,7 @@ vozlišč grafa prikazuje širjenje in zajezevanje požara. Koda funkcije je nas
             print("Situacija v času " + str(t) + ":")
             barvanje_v_casu_t(G, B, gasilci, t) 
 \end{verbatim}
-\end{figure}
+\end{scriptsize}
 
 \noindent Funkcija $barvanje\_po\_korakih$ deluje s pomočjo funkcije $barvanje\_v\_casu\_t$, ki predstavlja
 situacijo v času t. Funkcijo si za lažje razumevanje poglejmo na konkretnem primeru.
@@ -253,37 +256,47 @@ Funkcija $barvanje\_po\_korakih$ zahteva tri argumente
 in sicer graf $G$, množico izvornih vozlišč $B$ ter $gasilci$, ki predstavlja število gasilcev, ki 
 bodo v vsaki časovni enoti gasili požar.
 Izberemo si naslednje:
+\begin{small}
 \begin{verbatim}
     G = graphs.PetersenGraph()
     B = [1, 5]
     gasilci = 2
 \end{verbatim}
+\end{small}
 Imamo torej petersonov graf, na katerem bo požar izbruhnil v vozliščih $1$ in $5$ in v vsaki časovni enoti ga bosta
 gasila dva gasilca. \\
 Opomba: množico vozlišč $B$ bi lahko izbrali tudi naključno in sicer s funkcijo, ki bo predstavljana
 v nadaljevanju, in za aragument prejme graf ter število vozlišč, ki bi radi da so izvor požara. \\
 
 \noindent Če zaženemo
+\begin{small}
 \begin{verbatim}
     barvanje_po_korakih(G2, B2, gasilci2)
 \end{verbatim}
+\end{small}
 dobimo naslednje:
+\begin{small}
 \begin{verbatim}
     Število potrebnih časovnih korakov: 2
     Situacija v času 0:
 \end{verbatim}
+\end{small}
     \begin{center}
         \includegraphics[scale=0.5]{peterson0}
     \end{center}
+\begin{small}
 \begin{verbatim}
     Situacija v času 1:
 \end{verbatim}
+\end{small}
     \begin{center}
         \includegraphics[scale=0.5]{peterson1}
     \end{center}
+\begin{small}
 \begin{verbatim}
     Situacija v času 2:
 \end{verbatim}
+\end{small}
     \begin{center}
         \includegraphics[scale=0.5]{peterson2}
     \end{center}
@@ -319,8 +332,7 @@ nov seznam sestavljen iz naborov oblike
 $$\left( \text{število vozlišč grafa}, \text{potreben čas reševanje problema na grafu} \right).$$
 Koda funkcije:
 
-\begin{figure}[h]
-\scriptsize
+\begin{scriptsize}
 \begin{verbatim}
     import random
     def nakljucno_izberi_vzolisca(graf, n):
@@ -344,7 +356,7 @@ Koda funkcije:
         
         return seznam_naborov
 \end{verbatim}
-\end{figure}
+\end{scriptsize}
 
 \noindent V funkciji sva si pomagali s funkcijo $nakljucno\_izberi\_vzolisca$, ki kot 
 argument sprejme poljuben graf $graf$ ter poljubno pozitivno število $n$. Funkcija vrne 
