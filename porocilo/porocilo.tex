@@ -14,6 +14,10 @@
 \usepackage{graphicx,subfig}
 
 
+\usepackage{graphicx}
+\graphicspath{{./slike/}} 
+
+
 \textwidth 15cm
 \textheight 24cm
 \oddsidemargin.5cm
@@ -53,10 +57,6 @@ Projekt pri predmetu Finančni praktikum\\[1cm]}
 % ================================================================================================
 
 
-\section{Naslov}
-Besedilo ...
-
-\subsection{Podnaslov}
 \begin{itemize}
     \item Opis in formulacija problema (opis, predstavitev clp-ja, koda clp-ja, alijeproblemkončan, caspotreben) KLara
     \item Vizualizacija problema (koda barvanja, primer G2) Karolina
@@ -203,6 +203,104 @@ return d
 Funkcija $cas\_potreben$ torej za vsak graf, podmnožico vozlišč $B$ grafa ter določeno število gasilcev
 izračuna potreben čas za rešitev algoritma. Pomembna opomba tukaj je, da ta čas ni enak časovni zahtevnosti
 algoritma. Potreben čas predstavlja število časovnih enot v procesu širjenja požara in reševanju vozlišč.
+
+\pagebreak
+
+% ================================================================================================
+
+\section{Vizualizacija problema}
+
+\subsection{Predstavitev funkcij za barvanje}
+
+\noindent Za lažjo predstavo poteka problema sva napisali funkcijo $barvanje\_po\_korakih$, ki z barvanjem
+vozlišč grafa prikazuje širjenje in zajezevanje požara. Koda funkcije je naslednja:
+
+\begin{verbatim}
+    def barvanje_v_casu_t(G, B, gasilci, t):
+        ''' pomožna funkcija barvanje_v_casu_t izriše graf in pobarva vozlišča v 
+        določenem času (t). Začetna vozlišča oz. izvor pošara pobarva v zeleno, 
+        pogorela v  rdečo, zaščitena pa v modro. '''
+
+        b = skrcitev(clp(G, B, gasilci)[1], t) # burnt v času t BREZ ZAČETNIH B
+        for el in B:
+            b.remove(el)
+        d = skrcitev(clp(G, B, gasilci)[2], t) # defended vozlišča v času t
+        return G.show(partition = [b, B, d])
+
+    def barvanje_po_korakih(G, B, gasilci):
+        ''' funkcija, ki za vsako časovno enoto nariše situacijo na grafu.
+        Barve:
+            - zelena: oglišča kjer se požar začne (B)
+            - rdeča: pogorela
+            - modra: zaščitena '''
+
+        time = cas_potreben(G, B, gasilci)
+        print("Število potrebnih časovnih korakov: " + str(time))
+        for t in range(0, time + 1):
+            print("Situacija v času " + str(t) + ":")
+            barvanje_v_casu_t(G, B, gasilci, t)    
+\end{verbatim}
+
+\noindent Funkcija $barvanje\_po\_korakih$ deluje s pomočjo funkcije $barvanje\_v\_casu\_t$, ki predstavlja
+situacijo v času t. Funkcijo si za lažje razumevanje poglejmo na konkretnem primeru.
+
+\subsection{Primer na petersonoven grafu}
+\noindent Potek problema in barvanje predstavimo na pretersonovem grafu. \\ 
+Funkcija $barvanje\_po\_korakih$ zahteva tri argumente
+in sicer graf $G$, množico izvornih vozlišč $B$ ter $gasilci$, ki predstavlja število gasilcev, ki 
+bodo v vsaki časovni enoti gasili požar.
+Izberemo si naslednje:
+\begin{verbatim}
+    G = graphs.PetersenGraph()
+    B = [1, 5]
+    gasilci = 2
+\end{verbatim}
+Imamo torej petersonov graf, na katerem bo požar izbruhnil v vozliščih $1$ in $5$ in v vsaki časovni enoti ga bosta
+gasila dva gasilca. \\
+Opomba: množico vozlišč $B$ bi lahko izbrali tudi naključno in sicer s funkcijo, ki bo predstavljana
+v nadaljevanju, in za aragument prejme graf ter število vozlišč, ki bi radi da so izvor požara. \\
+
+\noindent Če zaženemo
+\begin{verbatim}
+    barvanje_po_korakih(G2, B2, gasilci2)
+\end{verbatim}
+dobimo naslednje:
+\begin{verbatim}
+    Število potrebnih časovnih korakov: 2
+    Situacija v času 0:
+\end{verbatim}
+    \begin{center}
+        \includegraphics[scale=0.5]{peterson0}
+    \end{center}
+\begin{verbatim}
+    Situacija v času 1:
+\end{verbatim}
+    \begin{center}
+        \includegraphics[scale=0.5]{peterson1}
+    \end{center}
+\begin{verbatim}
+    Situacija v času 2:
+\end{verbatim}
+    \begin{center}
+        \includegraphics[scale=0.5]{peterson2}
+    \end{center}
+
+\noindent Funkcija $barvanje\_po\_korakih$ nam na začetku izpiše število potrebnih 
+časovnih korakov, ki ga izračuna z že predstavljeno funkcijo $cas\_potreben$. 
+Nato pa nam izriše situacijo v vsakem časovnem koraku:
+\begin{itemize}
+    \item situacija \underline{v času $0$} so
+    zgolj vozlišča izvora požara, v našem primeru vozlišči $1$ in $5$. \textcolor{green}{Vozlišča izvora} 
+    požara so tekom celotne grafične predstavitve pobarvane v \textcolor{green}{zeleno}. 
+    \item v naslednjem časovnem koraku, \underline{času $1$} dva gasilca zaščitita požar in sicer v vozlišču $6$ in $7$.
+    \textcolor{blue}{Zaščitena vozlišča} so pobarvana z \textcolor{blue}{modro}. Po tem ko gasilca zaščitita omenjeni vozlišči, se
+    požar lahko naprej razširi le v vozlišče $2$ in $0$ (iz že zagorelega vozlišča $1$) ter v vozlišče $8$ (iz že
+    zagorelega vozlišča $5$). \textcolor{red}{Pogorela vozlišča} so pobarvana z \textcolor{red}{rdečo}.
+    \item v naslednjem času, \underline{času $2$} gasilca ponovno zaščitita vozlišči in sicer $3$ ter $4$. 
+    Z grafičnega prikaza je razvidno, da se požar ne more več razširiti naprej. Edino nepogorlo
+    in nezaščiteno vozlišče je vozlišče $9$.
+\end{itemize}
+
 
 
 % ================================================================================================
