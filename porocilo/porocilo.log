@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.3)  9 JAN 2023 11:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.3)  9 JAN 2023 20:43
 entering extended mode
 **"c:/Users/Uporabnik/OneDrive/Namizje/SOLA/3.letnik/FINANCNI PRAKTIKUM/Projekt-The-firefighter-problem/porocilo/porocilo.tex"
 ("c:/Users/Uporabnik/OneDrive/Namizje/SOLA/3.letnik/FINANCNI PRAKTIKUM/Projekt-The-firefighter-problem/porocilo/porocilo.tex"
@@ -614,31 +614,63 @@ Package caption Info: listings package is loaded.
 \c@lotdepth=\count316
 \sf@top=\skip56
 \sf@bottom=\skip57
+) (C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex/latex/makecell\makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+ (C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen273
+\ar@mcellbox=\box73
+\extrarowheight=\dimen274
+\NC@list=\toks38
+\extratabsurround=\skip58
+\backup@length=\skip59
+\ar@cellbox=\box74
+)
+\rotheadsize=\dimen275
+\c@nlinenum=\count317
+\TeXr@lab=\toks39
+) (C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip60
+\LTright=\skip61
+\LTpre=\skip62
+\LTpost=\skip63
+\LTchunksize=\count318
+\LTcapwidth=\dimen276
+\LT@head=\box75
+\LT@firsthead=\box76
+\LT@foot=\box77
+\LT@lastfoot=\box78
+\LT@cols=\count319
+\LT@rows=\count320
+\c@LT@tables=\count321
+\c@LT@chunks=\count322
+\LT@p@ftn=\toks40
 ) ("c:/Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.aux")
 \openout1 = `porocilo.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 31.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 33.
  (C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-\AtBeginShipoutBox=\box73
-Package hyperref Info: Link coloring OFF on input line 31.
+\AtBeginShipoutBox=\box79
+Package hyperref Info: Link coloring OFF on input line 33.
  (C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
@@ -646,35 +678,39 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count317
+\c@section@level=\count323
 )
-LaTeX Info: Redefining \ref on input line 31.
-LaTeX Info: Redefining \pageref on input line 31.
-LaTeX Info: Redefining \nameref on input line 31.
+LaTeX Info: Redefining \ref on input line 33.
+LaTeX Info: Redefining \pageref on input line 33.
+LaTeX Info: Redefining \nameref on input line 33.
  ("c:/Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.out") ("c:/Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.out")
 \@outlinefile=\write6
 \openout6 = `porocilo.out'.
 
  ABD: EveryShipout initializing macros (C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count318
-\scratchdimen=\dimen273
-\scratchbox=\box74
-\nofMPsegments=\count319
-\nofMParguments=\count320
-\everyMPshowfont=\toks38
-\MPscratchCnt=\count321
-\MPscratchDim=\dimen274
-\MPnumerator=\count322
-\makeMPintoPDFobject=\count323
-\everyMPtoPDFconversion=\toks39
+\scratchcounter=\count324
+\scratchdimen=\dimen277
+\scratchbox=\box80
+\nofMPsegments=\count325
+\nofMParguments=\count326
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count327
+\MPscratchDim=\dimen278
+\MPnumerator=\count328
+\makeMPintoPDFobject=\count329
+\everyMPtoPDFconversion=\toks42
 ) (C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
 )
-\c@lstlisting=\count324
+\c@lstlisting=\count330
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: longtable package is loaded.
+ (C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
 Package caption Info: End \AtBeginDocument code.
  [1
 
@@ -713,142 +749,213 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout7 = `porocilo.toc'.
 
  [2]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 60.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 67.
  (C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [3]
-Underfull \hbox (badness 10000) in paragraph at lines 81--84
+)
+Underfull \hbox (badness 10000) in paragraph at lines 71--74
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--98
+Underfull \hbox (badness 10000) in paragraph at lines 86--88
 
  []
 
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 100.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 90.
 (C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [4]
-Underfull \hbox (badness 10000) in paragraph at lines 161--169
+) [3]
+Underfull \hbox (badness 10000) in paragraph at lines 151--159
 
  []
 
-[5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 278--282
+[4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 268--272
 
  []
 
-<./slike/peterson0.png, id=137, 281.853pt x 268.8444pt>
+<./slike/peterson0.png, id=138, 281.853pt x 268.8444pt>
 File: ./slike/peterson0.png Graphic file (type png)
 <use ./slike/peterson0.png>
-Package pdftex.def Info: ./slike/peterson0.png  used on input line 297.
+Package pdftex.def Info: ./slike/peterson0.png  used on input line 287.
 (pdftex.def)             Requested size: 140.92615pt x 134.42188pt.
-[7]
+[6]
 <./slike/peterson1.png, id=145, 281.853pt x 268.8444pt>
 File: ./slike/peterson1.png Graphic file (type png)
 <use ./slike/peterson1.png>
-Package pdftex.def Info: ./slike/peterson1.png  used on input line 305.
+Package pdftex.def Info: ./slike/peterson1.png  used on input line 295.
 (pdftex.def)             Requested size: 140.92615pt x 134.42188pt.
 <./slike/peterson2.png, id=146, 281.853pt x 268.8444pt>
 File: ./slike/peterson2.png Graphic file (type png)
 <use ./slike/peterson2.png>
-Package pdftex.def Info: ./slike/peterson2.png  used on input line 313.
+Package pdftex.def Info: ./slike/peterson2.png  used on input line 303.
 (pdftex.def)             Requested size: 140.92615pt x 134.42188pt.
- [8 <./slike/peterson0.png> <./slike/peterson1.png> <./slike/peterson2.png>] [9]
-Overfull \hbox (10.38512pt too wide) in paragraph at lines 336--336
+ [7 <./slike/peterson0.png> <./slike/peterson1.png> <./slike/peterson2.png>] [8]
+
+Package hyperref Warning: Composite letter `\textasciicaron+C'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textasciicaron' on input line 326.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 329--336
+
+ []
+
+<./slike/D1.png, id=159, 409.0482pt x 279.6849pt>
+File: ./slike/D1.png Graphic file (type png)
+<use ./slike/D1.png>
+Package pdftex.def Info: ./slike/D1.png  used on input line 343.
+(pdftex.def)             Requested size: 90.0pt x 61.53513pt.
+<./slike/D2.png, id=160, 261.6174pt x 279.6849pt>
+File: ./slike/D2.png Graphic file (type png)
+<use ./slike/D2.png>
+Package pdftex.def Info: ./slike/D2.png  used on input line 344.
+(pdftex.def)             Requested size: 90.0pt x 96.21399pt.
+<./slike/D3.png, id=161, 307.1475pt x 279.6849pt>
+File: ./slike/D3.png Graphic file (type png)
+<use ./slike/D3.png>
+Package pdftex.def Info: ./slike/D3.png  used on input line 345.
+(pdftex.def)             Requested size: 90.0pt x 81.95154pt.
+<./slike/D4.png, id=162, 358.4592pt x 279.6849pt>
+File: ./slike/D4.png Graphic file (type png)
+<use ./slike/D4.png>
+Package pdftex.def Info: ./slike/D4.png  used on input line 346.
+(pdftex.def)             Requested size: 90.0pt x 70.21979pt.
+<./slike/D5.png, id=163, 308.5929pt x 279.6849pt>
+File: ./slike/D5.png Graphic file (type png)
+<use ./slike/D5.png>
+Package pdftex.def Info: ./slike/D5.png  used on input line 347.
+(pdftex.def)             Requested size: 90.0pt x 81.56744pt.
+<./slike/D6.png, id=164, 320.8788pt x 279.6849pt>
+File: ./slike/D6.png Graphic file (type png)
+<use ./slike/D6.png>
+Package pdftex.def Info: ./slike/D6.png  used on input line 348.
+(pdftex.def)             Requested size: 90.0pt x 78.44353pt.
+<./slike/D7.png, id=165, 288.3573pt x 279.6849pt>
+File: ./slike/D7.png Graphic file (type png)
+<use ./slike/D7.png>
+Package pdftex.def Info: ./slike/D7.png  used on input line 349.
+(pdftex.def)             Requested size: 90.0pt x 87.29462pt.
+<./slike/D8.png, id=166, 229.0959pt x 279.6849pt>
+File: ./slike/D8.png Graphic file (type png)
+<use ./slike/D8.png>
+Package pdftex.def Info: ./slike/D8.png  used on input line 350.
+(pdftex.def)             Requested size: 90.0pt x 109.87045pt.
+<./slike/D9.png, id=167, 291.9708pt x 279.6849pt>
+File: ./slike/D9.png Graphic file (type png)
+<use ./slike/D9.png>
+Package pdftex.def Info: ./slike/D9.png  used on input line 351.
+(pdftex.def)             Requested size: 90.0pt x 86.21063pt.
+<./slike/D10.png, id=168, 279.6849pt x 279.6849pt>
+File: ./slike/D10.png Graphic file (type png)
+<use ./slike/D10.png>
+Package pdftex.def Info: ./slike/D10.png  used on input line 352.
+(pdftex.def)             Requested size: 90.0pt x 90.0003pt.
+[9 <./slike/D1.png> <./slike/D2.png> <./slike/D3.png> <./slike/D4.png> <./slike/D5.png> <./slike/D6.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 356--357
+
+ []
+
+<./slike/cas.png, id=180, 411.2163pt x 341.8371pt>
+File: ./slike/cas.png Graphic file (type png)
+<use ./slike/cas.png>
+Package pdftex.def Info: ./slike/cas.png  used on input line 358.
+(pdftex.def)             Requested size: 164.4836pt x 136.7324pt.
+[10 <./slike/D7.png> <./slike/D8.png> <./slike/D9.png> <./slike/D10.png> <./slike/cas.png>]
+Overfull \hbox (10.38512pt too wide) in paragraph at lines 371--371
 []\T1/lmr/bx/n/17.28 Testiranje pro-grama glede na ²te-vilo vo-z-li²£ grafa 
  []
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 336.
+(hyperref)                removing `\textasciicaron' on input line 371.
 
 
-Overfull \hbox (11.8223pt too wide) in paragraph at lines 340--344
+Overfull \hbox (11.8223pt too wide) in paragraph at lines 375--379
 \T1/lmr/m/n/12 Za iz-vedbo te-sti-ra-nja pro-grama sva spi-sali funk-cijo $\OML/lmm/m/it/12 seznam[]naborov[]st[]vozlisc[]cas$\T1/lmr/m/n/12 ,
  []
 
 
-Overfull \hbox (16.21974pt too wide) in paragraph at lines 340--344
+Overfull \hbox (16.21974pt too wide) in paragraph at lines 375--379
 \T1/lmr/m/n/12 ki kot ar-gu-mente sprjme $\OML/lmm/m/it/12 seznam[]imen[]grafov$\T1/lmr/m/n/12 , $\OML/lmm/m/it/12 st[]gasilcev$ \T1/lmr/m/n/12 ter $\OML/lmm/m/it/12 stevilo[]vozlic[]v[]B$\T1/lmr/m/n/12 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--377
+Underfull \hbox (badness 10000) in paragraph at lines 408--412
 
  []
 
-[10]
-<./slike/plot12.png, id=162, 410.4936pt x 328.8285pt>
+[11]
+<./slike/plot12.png, id=194, 410.4936pt x 328.8285pt>
 File: ./slike/plot12.png Graphic file (type png)
 <use ./slike/plot12.png>
-Package pdftex.def Info: ./slike/plot12.png  used on input line 400.
+Package pdftex.def Info: ./slike/plot12.png  used on input line 435.
 (pdftex.def)             Requested size: 136.57634pt x 109.40685pt.
-<./slike/plot13.png, id=163, 396.0396pt x 328.8285pt>
+<./slike/plot13.png, id=195, 396.0396pt x 328.8285pt>
 File: ./slike/plot13.png Graphic file (type png)
 <use ./slike/plot13.png>
-Package pdftex.def Info: ./slike/plot13.png  used on input line 403.
+Package pdftex.def Info: ./slike/plot13.png  used on input line 438.
 (pdftex.def)             Requested size: 136.57634pt x 113.39577pt.
-<./slike/plot14.png, id=164, 396.0396pt x 328.8285pt>
+<./slike/plot14.png, id=196, 396.0396pt x 328.8285pt>
 File: ./slike/plot14.png Graphic file (type png)
 <use ./slike/plot14.png>
-Package pdftex.def Info: ./slike/plot14.png  used on input line 406.
+Package pdftex.def Info: ./slike/plot14.png  used on input line 441.
 (pdftex.def)             Requested size: 136.57634pt x 113.39577pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--420
+Underfull \hbox (badness 10000) in paragraph at lines 452--455
 
  []
 
-<./slike/plot22.png, id=165, 410.4936pt x 328.8285pt>
+<./slike/plot22.png, id=197, 410.4936pt x 328.8285pt>
 File: ./slike/plot22.png Graphic file (type png)
 <use ./slike/plot22.png>
-Package pdftex.def Info: ./slike/plot22.png  used on input line 432.
+Package pdftex.def Info: ./slike/plot22.png  used on input line 467.
 (pdftex.def)             Requested size: 136.57634pt x 109.40685pt.
-<./slike/plot23.png, id=166, 396.0396pt x 328.8285pt>
+<./slike/plot23.png, id=198, 396.0396pt x 328.8285pt>
 File: ./slike/plot23.png Graphic file (type png)
 <use ./slike/plot23.png>
-Package pdftex.def Info: ./slike/plot23.png  used on input line 435.
+Package pdftex.def Info: ./slike/plot23.png  used on input line 470.
 (pdftex.def)             Requested size: 136.57634pt x 113.39577pt.
-<./slike/plot24.png, id=167, 396.0396pt x 328.8285pt>
+<./slike/plot24.png, id=199, 396.0396pt x 328.8285pt>
 File: ./slike/plot24.png Graphic file (type png)
 <use ./slike/plot24.png>
-Package pdftex.def Info: ./slike/plot24.png  used on input line 438.
+Package pdftex.def Info: ./slike/plot24.png  used on input line 473.
 (pdftex.def)             Requested size: 136.57634pt x 113.39577pt.
-[11 <./slike/plot12.png> <./slike/plot13.png> <./slike/plot14.png> <./slike/plot22.png> <./slike/plot23.png> <./slike/plot24.png>] [12]
+[12 <./slike/plot12.png> <./slike/plot13.png> <./slike/plot14.png> <./slike/plot22.png> <./slike/plot23.png> <./slike/plot24.png>] [13]
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 461.
+(hyperref)                removing `\textasciicaron' on input line 496.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 463--472
+Underfull \hbox (badness 10000) in paragraph at lines 498--507
 
  []
 
-[13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 485.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 485.
+[14]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 520.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 520.
  ("c:/Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 485.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 485.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 520.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 520.
 Package rerunfilecheck Info: File `porocilo.out' has not changed.
-(rerunfilecheck)             Checksum: 45492D2B02B405EE4916E681FDFE3B69;868.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 485.
+(rerunfilecheck)             Checksum: 6F60ADB10E126F8701B73F0E6D122A81;945.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 520.
  ) 
 Here is how much of TeX's memory you used:
- 25850 strings out of 480790
- 528585 string characters out of 2895425
- 815475 words of memory out of 3000000
- 41327 multiletter control sequences out of 15000+200000
+ 26257 strings out of 480790
+ 533697 string characters out of 2895425
+ 821966 words of memory out of 3000000
+ 41719 multiletter control sequences out of 15000+200000
  583927 words of font info for 57 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,8n,103p,1067b,517s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt8.pfb>
-Output written on "c:/Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.pdf" (13 pages, 361785 bytes).
+Output written on "c:/Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.pdf" (14 pages, 1102552 bytes).
 PDF statistics:
- 230 PDF objects out of 1000 (max. 8388607)
- 29 named destinations out of 1000 (max. 500000)
- 298 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 263 PDF objects out of 1000 (max. 8388607)
+ 32 named destinations out of 1000 (max. 500000)
+ 361 words of extra memory for PDF output out of 10000 (max. 10000000)
 

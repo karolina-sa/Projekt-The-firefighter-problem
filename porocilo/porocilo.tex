@@ -12,6 +12,8 @@
 \usepackage{makeidx}
 \usepackage[most]{tcolorbox}
 \usepackage{graphicx,subfig}
+\usepackage{makecell}
+\usepackage{longtable}
 
 \usepackage{graphicx}
 \graphicspath{{./slike/}} 
@@ -40,7 +42,7 @@ Finančna matematika 1.~stopnja}
 \begin{center}{\large
 Projekt pri predmetu Finančni praktikum\\[5mm]
 {\Huge \bf The firefighter problem}\\[5mm]
-Karolina Šavli, Klara Travnik\\[1cm]}
+Karolina Šavli in Klara Travnik\\[1cm]}
 \end{center}
 \vfill
 
@@ -54,18 +56,6 @@ Karolina Šavli, Klara Travnik\\[1cm]}
 \pagebreak
 
 % ================================================================================================
-
-
-\begin{itemize}
-    \item Opis in formulacija problema (opis, predstavitev clp-ja, koda clp-ja, alijeproblemkončan, caspotreben) KLara
-    \item Vizualizacija problema (koda barvanja, primer G2) Karolina
-    \item (Časovna zahtevnost algoritma): 
-    \item Testiranje programa glede na število vozlišč grafa, komentar grafov Karolina
-    \item Sklep in zaključek (uporaba problema gasilca v praksi (hiše, bolezen)) Klara
-\end{itemize}
-
-
-\pagebreak
 
 \section{Opis in formulacija problema}
 
@@ -328,6 +318,51 @@ Nato pa nam izriše situacijo v vsakem časovnem koraku:
     Z grafičnega prikaza je razvidno, da se požar ne more več razširiti naprej. Edino nepogorlo
     in nezaščiteno vozlišče je vozlišče $9$.
 \end{itemize}
+
+\pagebreak
+
+% ================================================================================================
+
+\section{Časovna zahtevnost na konkretnih primerih}
+\overfullrule=0pt
+
+Kot zanimivost sva s pomočjo \emph{Python} knjižnice \emph{timeit} generirali funkcijo, ki nam 
+vrne čas reševanja funkcije $clp$, opisane v prvem poglavju. 
+Kot že znano, funkcija $clp$ sprejme tri argumente: graf, množico izvorov požara in
+število gasilcev. Funkciji sva podali poljuben graf, naključno vozlišče (eno samo) ter
+določili sva, da bo požar gasil samo en gasilec.
+Slednje sva naredili na desetih grafih z različnim številom vozlišč in dobili sva
+naslednje razultate: \\
+
+\begin{center}
+    \begin{longtable}{c|c|c}
+        število vozlišč & slika obravnavanega grafa & časovna zahtevnost \\ \hline
+        \endfirsthead \hline
+        število vozlišč & slika obravnavanega grafa & časovna zahtevnost \\
+        \endhead \endfoot \endlastfoot
+        5 & \includegraphics[width=90pt]{D1} & 1.0068004485219717e-06 \\ \hline
+        10 & \includegraphics[width=90pt]{D2} & 8.19600245449692e-07 \\ \hline
+        15 & \includegraphics[width=90pt]{D3} & 7.370006642304361e-07 \\ \hline
+        20 & \includegraphics[width=90pt]{D4} & 1.1784009984694422e-06 \\ \hline
+        25 & \includegraphics[width=90pt]{D5} & 9.944007615558803e-07 \\ \hline
+        30 & \includegraphics[width=90pt]{D6} & 6.845992174930871e-07 \\ \hline
+        35 & \includegraphics[width=90pt]{D7} & 1.2680000509135426e-06 \\ \hline
+        40 & \includegraphics[width=90pt]{D8} & 1.1128009646199644e-06 \\ \hline
+        45 & \includegraphics[width=90pt]{D9} & 9.780007530935108e-07 \\ \hline
+        50 & \includegraphics[width=90pt]{D10} & 1.3369994121603667e-06 \\ \hline
+    \end{longtable}
+\end{center}
+
+Dobljene razultate predstavimo še na grafu: \\
+\begin{center}
+    \includegraphics[scale=0.4]{cas}
+\end{center}
+
+Opazimo, da čas reševanje grafa za naše primere ni v nobeni relaciji s
+številom vozlišč.
+Predvidevamo pa lahko, da je čas reševanje v splošnem večji za grafe z večjim 
+številom vozlišč. To bi lahko s simulatijo tudi pokazale in sicer na podoben način
+kot sva izvedli testiranje v naslednjem poglavju. 
 
 \pagebreak
 
