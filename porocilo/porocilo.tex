@@ -59,20 +59,21 @@ Karolina Šavli in Klara Travnik\\[1cm]}
 
 \section{Opis in formulacija problema}
 
-\subsection{Predstavitev}
+\subsection{Predstavitev problema}
 \noindent \emph{The firefighter problem} oziroma \emph{problem gasilca} je optimizacijski problem, katerega cilj je 
 minimiziranje števila pogorelih vozlišč na grafu. \\
 Vhodni podatki problema so:
 \begin{itemize}
     \item graf $G,$
-    \item množica vozlišč $B_{init} \subseteq V\left(G\right)$, na katerih v času $0$ izbruhne požar,
+    \item množica vozlišč $B_{init} \subseteq V\left(G\right)$, na katerih v času $0$ izbruhne požar in
     \item število gasilcev $D$.
 \end{itemize} 
 V vsaki časovni enoti ($t > 0$) gasilci izberejo nepogorela vozlišča, ki jih bodo rešili tako,
-da čim bolj omejijo požar. Ta se razširi le na sosednja vozlišča pogorelih v prejšnji časovni enoti,
-ki jih gasilci niso uspeli rešiti. Proces se ponavlja dokler požar ni zajezen. \\
+da čim bolj omejijo požar. Ta se lahko razširi le na sosede že pogorelih vozlišč, ki niso še zaščitena. 
+V nalednji časovni enoti gasilci ponovno gasijo požar in opisan
+proces se ponavlja dokler požar ni zajezen. \\
 
-\noindent Predpostavke problema so še: 
+\noindent Predpostavke problema: 
 \begin{itemize}
     \item če je bilo vozlišče v nekem času $t$ rešeno ali je pogorelo, obvelja rešeno oz. pogorelo tudi v 
     vseh prihodnjih časih,
@@ -82,133 +83,129 @@ ki jih gasilci niso uspeli rešiti. Proces se ponavlja dokler požar ni zajezen.
 \end{itemize}
 
 \subsection{Program}
-
-\noindent Opisani problem sva v programu CoCalc, v programskem jeziku SageMath 
+\overfullrule=0pt
+\noindent Opisani problem sva v programu \emph{CoCalc}, v programskem jeziku \emph{SageMath} 
 zapisali kot \textbf{celoštevilski linearni program (CLP)}: \\
 
 \begin{scriptsize}
 \begin{verbatim}
     def clp(G, B, gasilci):
-    ''' vhodni podatki:
-         G           izbran graf
-         B           vozlišča, ki na začetku zgorijo
-         gasilci     število gasilcev, ki v vsakem koraku gasijo požar
-     izhodni podatki:
-         seznam oblike [število časovnih enot, pogorela/burnt vozlišča po časih, 
-         zaščitena/defended vozlišča po časih] '''
-    cas = 10
-    while True:
-        casi = range(1, cas+1) # uprabljamo pri zankah
-    
-        # CLP:
-        p = MixedIntegerLinearProgram(maximization=False) # CLP
-        d = p.new_variable(binary=True) # spremenljivka, defended
-        b = p.new_variable(binary=True) # spremenljivka, burnt
+        ''' vhodni podatki:
+            G           izbran graf
+            B           vozlišča, ki na začetku zgorijo
+            gasilci     število gasilcev, ki v vsakem koraku gasijo požar
+            izhodni podatki:
+            seznam oblike [št. časovnih enot, pogorela/burnt vozlišča po časih, 
+                    zaščitena/defended vozlišča po časih] '''
+        cas = 10
+        while True:
+            casi = range(1, cas+1) # uprabljamo pri zankah
+        
+            # CLP:
+            p = MixedIntegerLinearProgram(maximization=False) # CLP
+            d = p.new_variable(binary=True) # spremenljivka, defended
+            b = p.new_variable(binary=True) # spremenljivka, burnt
 
-        p.set_objective(sum(b[i, cas] for i in G)) # minimiziramo število 
-        pogorelih vozlišč na koncu 
+            # minimiziramo število pogorelih vozlišč na koncu:
+            p.set_objective(sum(b[i, cas] for i in G)) 
 
-        for t in casi:
+            for t in casi:
+                for i in G:
+                    for j in G[i]: # j je številka v seznamu vozlišča i, sosed od i
+                        p.add_constraint(b[i,t] + d[i,t] - b[j,t-1] >= 0)
+                    p.add_constraint(b[i,t] + d[i,t] <= 1)
+                    p.add_constraint(b[i,t] - b[i,t-1] >= 0)
+                    p.add_constraint(d[i,t] - d[i,t-1] >= 0)
+                p.add_constraint(sum((d[i,t] - d[i,t-1]) for i in G) <= gasilci)
+
             for i in G:
-                for j in G[i]: # j je številka v seznamu vozlišča i, sosed od i
-                    p.add_constraint(b[i,t] + d[i,t] - b[j,t-1] >= 0)
-                p.add_constraint(b[i,t] + d[i,t] <= 1)
-                p.add_constraint(b[i,t] - b[i,t-1] >= 0)
-                p.add_constraint(d[i,t] - d[i,t-1] >= 0)
-            p.add_constraint(sum((d[i,t] - d[i,t-1]) for i in G) <= gasilci)
-
-        for i in G:
-            p.add_constraint(b[i,0] == (1 if i in B else 0))
-            p.add_constraint(d[i,0] == 0)
+                p.add_constraint(b[i,0] == (1 if i in B else 0))
+                p.add_constraint(d[i,0] == 0)
+                
+            k = p.solve()
+            l = p.get_values(b)
+            m = p.get_values(d)
             
-        k = p.solve()
-        l = p.get_values(b)
-        m = p.get_values(d)
-        
-        #Ali je problem končan?
-        n = skrcitev(l, cas) # burnt vozlišča v cas
-        e = skrcitev(m, cas) # defended vozlišča v cas
-        skupaj = n + e
-        
-        koncan = 1
-        # sosedi od pogorelih vozlišč so lahko pogoreli ali zaščiteni.
-        Ne smejo biti prazna vozlišča
-        for pogorelo_vozlisce in n:
-            for sosed_od_pogorelo_vozlisce in G[pogorelo_vozlisce]:
-                if sosed_od_pogorelo_vozlisce not in skupaj:
-                    koncan = 0
-        koncan
-        
-        if koncan == 1:
-            break
-        else:
-            cas += 10
-        
-    return [k, l, m]
-\end{verbatim}
+            # Ali je problem končan?
+            n = skrcitev(l, cas) # burnt vozlišča v cas
+            e = skrcitev(m, cas) # defended vozlišča v cas
+            skupaj = n + e
+            
+            koncan = 1
+            # sosedi od pogorelih vozlišč so lahko pogoreli ali zaščiteni. 
+            #           Ne smejo biti prazna vozlišča.
+            for pogorelo_vozlisce in n:
+                for sosed_od_pogorelo_vozlisce in G[pogorelo_vozlisce]:
+                    if sosed_od_pogorelo_vozlisce not in skupaj:
+                        koncan = 0
+            koncan
+            
+            if koncan == 1:
+                break
+            else:
+                cas += 10
+            
+        return [k, l, m]\end{verbatim}
 \end{scriptsize}
 
-\noindent CLP sva želeli zastaviti tako, da v argumentu funkcije ni potrebno nastaviti časa,
-za katerega naj bi bil CLP končan. Zato sva nastavili nek začeten čas $cas = 10,$ za katerga 
-je bil rešen algoritem. Potem sva preverili, če je ta \textbf{rešitev končna}, 
-torej, ali je vrednost spremenljivk v zadnji časovni enoti ustrezna.
-To pomeni, da za vsako vozlišče, ki je zgorelo, velja, da je vsako sosednje
-vozlišče le-tega tudi zgorelo, ali pa bilo rešeno. V nasprotnem primeru 
-proces še ne bi bil končen, in čas $cas$ se nastavi na večjo vrednost ter
-ponovimo algoritem. \\
+\noindent CLP sva želeli zastaviti tako, da v argumentu funkcije ni potrebno nastaviti časa v
+katerem naj bi bil CLP končan. Slednje sva dosegli z \emph{while True} zanko in
+nastavitvijo začetnega časa, $cas = 10$. V tem času je problem lahko
+končan ali ne. Če problem v tem času ni končan, torej rešitev ni končna, sva čas povečali za $10$ ter
+algoritem ponovili.
+Da je rešitev končna pomeni, da za vsako vozlišče, ki je zgorelo, velja, da je vsako sosednje
+vozlišče le-tega tudi zgorelo, ali pa bilo rešeno. \\
 
-\noindent Za točen čas, za katerega dobimo končno rešitev (proces se v naslednjih časih ne spreminja),
-sva napisali sledečo funkcijo:
+\noindent Za število potrebnih časovnih korakov, da dobimo končno rešitev (torej se proces/situacija v naslednjih časih ne spreminja),
+sva napisali naslednjo funkcijo:
 
 \begin{scriptsize}
 \begin{verbatim}
     def cas_potreben(G, B, gasilci):
-        ''' iz p.solve() pridobi čas po katerem se nič več ne spremeni 
-        -> dobimo potreben čas '''
-        #cas = 10 #začetni cas
+        ''' iz p.solve() pridobi čas po katerem se nič več ne spremeni -> dobimo potreben čas '''
         cas = 10
         while True:
-        t, burnt, defended = clp(G, B, gasilci)
+            t, burnt, defended = clp(G, B, gasilci)
 
-        urej_burnt = sorted(burnt.items(), key=lambda tup: tup[0][1])
-        #uredi glede na čas po vozliščih naraščajoče
-        urej_defended = sorted(defended.items(), key=lambda tup: tup[0][1]) 
+            # uredi glede na čas naraščajoče:
+            urej_burnt = sorted(burnt.items(), key=lambda tup: tup[0][1])
+            urej_defended = sorted(defended.items(), key=lambda tup: tup[0][1]) 
 
-        vredn_burnt= []
-        for i, v in urej_burnt:
-            vredn_burnt.append(v)
-        # pridobim ven vrednosti spremnljivk b v časih in vozliščih naraščajoče
+            vredn_burnt= []
+            for i, v in urej_burnt:
+                vredn_burnt.append(v)
+            # pridobim ven vrednosti spremnljivk b v časih in vozliščih naraščajoče
 
-        vredn_defended= []
-        for i, v in urej_defended:
-            vredn_defended.append(v)
-        # pridobim ven vrednosti spremnljivk d v časih in vozliščih naraščajoče
+            vredn_defended= []
+            for i, v in urej_defended:
+                vredn_defended.append(v)
+            # pridobim ven vrednosti spremnljivk d v časih in vozliščih naraščajoče
 
-        # from itertools import islice
-        from itertools import accumulate
-        dolzina = [len(G)] * (cas +1) 
-        #Vrednosti zgrupiram v paketke, v vsakem je toliko vrednosti, 
-        kolikor je vozlišč
-        seznami_vrednosti_po_casih_burnt = [tuple(vredn_burnt[x - y: x]) 
-        for x, y in zip(accumulate(dolzina), dolzina)]
+            # from itertools import islice
+            from itertools import accumulate
+            dolzina = [len(G)] * (cas +1) # Vrednosti zgrupiram v paketke, 
+                                          # v vsakem je toliko vrednosti, kolikor je vozlišč
+            seznami_vrednosti_po_casih_burnt = [tuple(vredn_burnt[x - y: x]) for x, y in zip(
+                                accumulate(dolzina), dolzina)]
 
-        seznami_vrednosti_po_casih_defended = [tuple(vredn_defended[x - y: x]) 
-        for x, y in zip(accumulate(dolzina), dolzina)]
+            seznami_vrednosti_po_casih_defended = [tuple(vredn_defended[x - y: x]) for x, y in zip(
+                                accumulate(dolzina), dolzina)]
 
-        d = next(i for i in range(len(dolzina)) if all(len(set(l[i:i+2])) == 1 
-        for l in (seznami_vrednosti_po_casih_burnt, seznami_vrednosti_po_casih_defended)))
-            
-        if d < cas:
-            break
-        else:
-            cas += 10
-        return d
-\end{verbatim}
+            d = next(i for i in range(len(dolzina)) 
+                if all(len(set(l[i:i+2])) == 1 
+                for l in (seznami_vrednosti_po_casih_burnt, seznami_vrednosti_po_casih_defended)))
+            if d < cas:
+                break
+            else:
+                cas += 10
+        return d\end{verbatim}
 \end{scriptsize}
 
 \noindent Funkcija $cas\_potreben$ torej za vsak graf, podmnožico vozlišč $B$ grafa ter določeno število gasilcev
-izračuna potreben čas za rešitev algoritma. Pomembna opomba tukaj je, da ta čas ni enak časovni zahtevnosti
+izračuna potreben čas za rešitev algoritma. \\
+Opomba: potreben čas ni enak časovni zahtevnosti
 algoritma. Potreben čas predstavlja število časovnih enot v procesu širjenja požara in reševanju vozlišč.
+Časovno zahtevnost pa bova obravnavali v nadaljevanju. 
 
 \pagebreak
 
@@ -224,29 +221,28 @@ vozlišč grafa prikazuje širjenje in zajezevanje požara. Koda funkcije je nas
 \begin{scriptsize}
 \begin{verbatim}
     def barvanje_v_casu_t(G, B, gasilci, t):
-        ''' pomožna funkcija barvanje_v_casu_t izriše graf in pobarva vozlišča v 
-        določenem času (t). Začetna vozlišča oz. izvor pošara pobarva v zeleno, 
-        pogorela v  rdečo, zaščitena pa v modro. '''
-
-        b = skrcitev(clp(G, B, gasilci)[1], t) # burnt v času t BREZ ZAČETNIH B
+        ''' pomožna funkcija barvanje_v_casu_t izriše graf in pobarva vozlišča v določenem času (t). 
+            Začetna vozlišča oz. izvor pošara pobarva v zeleno, 
+            pogorela v  rdečo, zaščitena pa v modro. '''
+        b = skrcitev(clp(G, B, gasilci)[1], t) # burnt vozlišča v času t BREZ ZAČETNIH VOZLIŠČ B
         for el in B:
             b.remove(el)
         d = skrcitev(clp(G, B, gasilci)[2], t) # defended vozlišča v času t
+        
         return G.show(partition = [b, B, d])
 
-    def barvanje_po_korakih(G, B, gasilci):
-        ''' funkcija, ki za vsako časovno enoto nariše situacijo na grafu.
-        Barve:
-            - zelena: oglišča kjer se požar začne (B)
-            - rdeča: pogorela
-            - modra: zaščitena '''
 
+    def barvanje_po_korakih(G, B, gasilci):
+        ''' funkcija, ki za vsako časovno enoto nariše situacijo na grafu
+            barve:
+                - zelena: oglišča kjer se požar začne (B)
+                - rdeča: pogorela
+                - modra: zaščitena '''
         time = cas_potreben(G, B, gasilci)
         print("Število potrebnih časovnih korakov: " + str(time))
         for t in range(0, time + 1):
             print("Situacija v času " + str(t) + ":")
-            barvanje_v_casu_t(G, B, gasilci, t) 
-\end{verbatim}
+            barvanje_v_casu_t(G, B, gasilci, t)\end{verbatim}
 \end{scriptsize}
 
 \noindent Funkcija $barvanje\_po\_korakih$ deluje s pomočjo funkcije $barvanje\_v\_casu\_t$, ki predstavlja
@@ -316,7 +312,7 @@ Nato pa nam izriše situacijo v vsakem časovnem koraku:
     zagorelega vozlišča $5$). \textcolor{red}{Pogorela vozlišča} so pobarvana z \textcolor{red}{rdečo}.
     \item v naslednjem času, \underline{času $2$} gasilca ponovno zaščitita vozlišči in sicer $3$ ter $4$. 
     Z grafičnega prikaza je razvidno, da se požar ne more več razširiti naprej. Edino nepogorlo
-    in nezaščiteno vozlišče je vozlišče $9$.
+    in nezaščiteno vozlišče pa je vozlišče $9$.
 \end{itemize}
 
 \pagebreak
@@ -327,7 +323,7 @@ Nato pa nam izriše situacijo v vsakem časovnem koraku:
 \overfullrule=0pt
 
 Kot zanimivost sva s pomočjo \emph{Python} knjižnice \emph{timeit} generirali funkcijo, ki nam 
-vrne čas reševanja funkcije $clp$, opisane v prvem poglavju. 
+vrne čas reševanja oziroma časovno zahtevnost funkcije $clp$, opisane v prvem poglavju. 
 Kot že znano, funkcija $clp$ sprejme tri argumente: graf, množico izvorov požara in
 število gasilcev. Funkciji sva podali poljuben graf, naključno vozlišče (eno samo) ter
 določili sva, da bo požar gasil samo en gasilec.
@@ -358,7 +354,7 @@ Dobljene razultate predstavimo še na grafu: \\
     \includegraphics[scale=0.4]{cas}
 \end{center}
 
-Opazimo, da čas reševanje grafa za naše primere ni v nobeni relaciji s
+\noindent Opazimo, da čas reševanje grafa za naše primere ni v nobeni relaciji s
 številom vozlišč.
 Predvidevamo pa lahko, da je čas reševanje v splošnem večji za grafe z večjim 
 številom vozlišč. To bi lahko s simulatijo tudi pokazale in sicer na podoben način
@@ -373,7 +369,7 @@ kot sva izvedli testiranje v naslednjem poglavju.
 \subsection{Potek dela}
 
 Za izvedbo testiranja programa sva spisali funkcijo $seznam\_naborov\_st\_vozlisc\_cas$, ki
-kot argumente sprjme $seznam\_imen\_grafov$, $st\_gasilcev$ ter $stevilo\_vozlic\_v\_B$. Tekom
+kot argumente sprejme $seznam\_imen\_grafov$, $st\_gasilcev$ ter $stevilo\_vozlic\_v\_B$. Tekom
 funkcije se sprehodimo čez $seznam\_imen\_grafov$ (seznam poljubnih imen grafov) in sestavljamo 
 nov seznam sestavljen iz naborov oblike  
 $$\left( \text{število vozlišč grafa}, \text{potreben čas reševanje problema na grafu} \right).$$
@@ -387,10 +383,9 @@ Koda funkcije:
         return random.sample(list(graf), n)
 
     def seznam_naborov_st_vozlisc_cas(seznam_imen_grafov, st_gasilcev, stevilo_vozlisc_v_B):
-        ''' funkcija, ki sprejme seznam v katerem so imena grafov, število gasilcev ter 
-            število vozlišč, ki jih želimo v začetni množici B.
+        ''' funkcija, ki sprejme seznam v katerem so imena grafov, število gasilcev ter število vozlišč, 
+            ki jih želimo v začetni množici B.
             Vrne pa seznam naborov oblike (število vozlišč, potreben čas reševanje problema)'''
-        
         # sprehodimo se po seznam_imen_grafov in sestavljamo nabor:
         seznam_naborov = []
         for graf in seznam_imen_grafov:
@@ -401,16 +396,15 @@ Koda funkcije:
             seznam_naborov.append((len(graf), potreben_cas1))
             seznam_naborov.append((len(graf), potreben_cas2))
         
-        return seznam_naborov
-\end{verbatim}
+        return seznam_naborov\end{verbatim}
 \end{scriptsize}
 
-\noindent V funkciji sva si pomagali s funkcijo $nakljucno\_izberi\_vzolisca$, ki kot 
+\noindent V funkciji sva si pomagali s funkcijo $nakljucno\_izberi\_vozlisca$, ki kot 
 argument sprejme poljuben graf $graf$ ter poljubno pozitivno število $n$. Funkcija vrne 
-$n$ poljubnih vozlišč $grafa$. Funkcijo sva uporabili pri generiranju množice začetnih 
-vozlišč $B$. Razlog pa je, da požar lahko izbruhne kjerkoli. \\
+$n$ poljubnih vozlišč $graf$-a. Namen funkcije je generirane naključne množice začetnih 
+vozlišč $B$, saj požar lahko izbruhne kjerkoli. \\
 
-\noindent Funkcijo $seznam\_navorov\_st\_vozlisc\_cas$ sva izvedli na zelo velikem seznamu grafov. Grafi seznama
+\noindent Funkcijo $seznam\_naborov\_st\_vozlisc\_cas$ sva izvedli na zelo velikem seznamu grafov. Grafi seznama
 so bili različnih velikosti in oblik. Obravnavo rezultatov sva razdelili glede 
 na spremenljivki $st\_gasilcev$ ter $stevilo\_vozlic\_v\_B$. \\
 Ločili sva primera:
@@ -419,7 +413,7 @@ Ločili sva primera:
     \item $st\_gasilcev = 2$ in $stevilo\_vozlic\_v\_B = \left\{ 2, \, 3, \, 4 \right\}$
 \end{itemize}
 
-\noindent Iz dobljenih podatkov sva nato sestavili \emph{.csv} datoteko. Podatke sva vizualzirali s pomočjo \emph{Python} knjižnice \emph{pandas}. 
+\noindent Iz dobljenih podatkov sva nato sestavili \emph{.csv} datoteko in podatke vizualzirali s pomočjo \emph{Python} knjižnice \emph{pandas}. 
 V grobem sva predstavlili odvisnost časa reševanje problema od števila vozlišč grafa. Število vozlišč obravnanih grafov
 je med $6$ in $77$. Grafične prikaze sva nazadnje nadgradili še z linarno regresijo. 
 
@@ -427,7 +421,7 @@ je med $6$ in $77$. Grafične prikaze sva nazadnje nadgradili še z linarno regr
 
 \subsection{1 gasilec \& 2, 3 ali 4 izvori požara}
 
-Za parametre $st\_gasilcev = 1$ in $stevilo\_vozlic\_v\_B = \left\{ 2, \, 3, \, 4 \right\}$ sva dobile
+Za parametre $st\_gasilcev = 1$ in $stevilo\_vozlic\_v\_B = \left\{ 2, \, 3, \, 4 \right\}$ sva dobili
 naslednje grafične prikaze:
 
 \begin{figure}[!htb]
@@ -459,7 +453,7 @@ za zaključek problema potrebujejo manj časa kot grafi z večjim število vozli
 
 \subsection{2 gasilca \& 2, 3 ali 4 izvori požara}
 
-Za parametre $st\_gasilcev = 2$ in $stevilo\_vozlic\_v\_B = \left\{ 2, \, 3, \, 4 \right\}$ sva dobile
+Za parametre $st\_gasilcev = 2$ in $stevilo\_vozlic\_v\_B = \left\{ 2, \, 3, \, 4 \right\}$ sva dobili
 naslednje grafične prikaze:
 
 \begin{figure}[!htb]
@@ -495,25 +489,35 @@ imamo $2$ gasilca, saj večje število gasilcev prej omeji požar.
 \pagebreak
 \section{Zaključek}
 
-V praksi najdemo več različic optimizacijskega problema gasilca. Na primer
-\textbf{širjenje bolezni} v manjši skupnosti, kjer z vozlišči grafa predstavimo ljudi 
-in s povezavami stike z drugimi. Če je vozlišče v grafu okuženo, ostane nalezljivo 
-za $A$ časovnih enot in lahko okuži sosede v tem časovnem okviru. Gasilce pa v tem
-primeru nadomestijo ukrepi proti širjenju (e.g. razkuževanje, nošenje mask,...). \\
-V igri \textbf{policistov in roparja} rešujemo problem, ali lahko $D$ policistov ujame roparja, ki se 
-premika po povezavah grafa. 
-Podobnost pa lahko najdemo tudi pri vzpostavljanju \textbf{komunikacijske mreže med člani uporniškega gibanja}
-tako, da se minimizira število izdaj članov. \\
+V praksi najdemo več različic obravnavanega optimizacijskega problema gasilca. Na primer:
+\begin{itemize}
+    \item\textbf{širjenje bolezni} v manjši skupnosti, kjer z vozlišči grafa predstavimo ljudi 
+    in s povezavami stike z drugimi. Če je vozlišče v grafu okuženo, ostane nalezljivo 
+    za $A$ časovnih enot in lahko okuži sosede v tem časovnem okviru. Gasilce pa v tem
+    primeru nadomestijo ukrepi proti širjenju (e.g. razkuževanje, nošenje mask, ...).
+    \item V igri \textbf{policistov in roparja} rešujemo problem, ali lahko $D$ policistov ujame roparja, ki se 
+    premika po povezavah grafa. 
+    \item Podobnost pa lahko najdemo tudi pri vzpostavljanju \textbf{komunikacijske mreže med člani uporniškega gibanja}
+    tako, da se minimizira število izdaj članov.
+\end{itemize}
 
-\noindent Delo najinega projekta zajema celoštevilski linearni program. Problema pa bi se lahko lotili še
-na kakšen drug način. V vsakem časovnem koraku iteracije bi lahko kot rešeno označili vozlišče z 
-največjo stopnjo. Tako bi preprečili, da, v primeru da zagori, bi se ogenj razširil na sosednja vozlišča
+\noindent Delo najinega projekta zajema reševanje, obravnavo in uporabo celoštevilskega linearnega programa. 
+Pri slednjem sva si pomagali s članki ``García-Martínez, Blum, Rodríguez in Lozano''\cite{garcia2015} ter
+``Fomin, Heggernes in van Leeuwen''\cite{fomin2015}. \\
+Problema bi se pa seveda lahko lotili še
+na kakšen drug način. V vsakem časovnem koraku iteracije bi lahko na primer kot rešeno označili vozlišče z 
+največjo stopnjo. Tako bi preprečili (v primeru da zagori), da se ogenj razširi na sosednja vozlišča
 le-tega. V nasprotnem primeru bi bila zajezitev požara težja. 
 S takim načinom bi potem morali pri testiranju pogledati razmerje med najvišjo stopnjo 
 grafa in časom. Vendar pa na tak način najverjetneje ne bi dobili najboljše
-rešitve, kot pri linearnem programu. 
-% \bibliographystyle{plain}
-% \bibliography{literatura}
+rešitve, kot pri linearnem programu. \\
+
+\noindent Glavni sklepi: 
+
+\pagebreak
+
+\bibliographystyle{plain}
+\bibliography{literatura}
 
 % ================================================================================================
 
