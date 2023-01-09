@@ -55,18 +55,6 @@ Karolina Šavli, Klara Travnik\\[1cm]}
 
 % ================================================================================================
 
-
-\begin{itemize}
-    \item Opis in formulacija problema (opis, predstavitev clp-ja, koda clp-ja, alijeproblemkončan, caspotreben) KLara
-    \item Vizualizacija problema (koda barvanja, primer G2) Karolina
-    \item (Časovna zahtevnost algoritma): 
-    \item Testiranje programa glede na število vozlišč grafa, komentar grafov Karolina
-    \item Sklep in zaključek (uporaba problema gasilca v praksi (hiše, bolezen)) Klara
-\end{itemize}
-
-
-\pagebreak
-
 \section{Opis in formulacija problema}
 
 \subsection{Predstavitev}
@@ -118,6 +106,9 @@ zapisali kot \textbf{celoštevilski linearni program (CLP)}: \\
         p.set_objective(sum(b[i, cas] for i in G)) # minimiziramo število 
         pogorelih vozlišč na koncu 
 
+
+
+
         for t in casi:
             for i in G:
                 for j in G[i]: # j je številka v seznamu vozlišča i, sosed od i
@@ -158,7 +149,7 @@ zapisali kot \textbf{celoštevilski linearni program (CLP)}: \\
 \end{verbatim}
 \end{scriptsize}
 
-\noindent CLP sva želeli zastaviti tako, da v argumentu funkcije ni potrebno nastaviti časa,
+\noindent CLP sva želeli zastaviti tako, da v argumentu funkcije ni potrebno napisati časa,
 za katerega naj bi bil CLP končan. Zato sva nastavili nek začeten čas $cas = 10,$ za katerga 
 je bil rešen algoritem. Potem sva preverili, če je ta \textbf{rešitev končna}, 
 torej, ali je vrednost spremenljivk v zadnji časovni enoti ustrezna.
@@ -220,8 +211,11 @@ sva napisali sledečo funkcijo:
 izračuna potreben čas za rešitev algoritma. Pomembna opomba tukaj je, da ta čas ni enak časovni zahtevnosti
 algoritma. Potreben čas predstavlja število časovnih enot v procesu širjenja požara in reševanju vozlišč.
 
-\pagebreak
+% ================================================================================================
+\section{Časovna zahtevnost algoritma}
 
+
+\pagebreak
 % ================================================================================================
 
 \section{Vizualizacija problema}
@@ -263,7 +257,7 @@ vozlišč grafa prikazuje širjenje in zajezevanje požara. Koda funkcije je nas
 situacijo v času t. Funkcijo si za lažje razumevanje poglejmo na konkretnem primeru.
 
 \subsection{Primer na Petersonovem grafu}
-\noindent Potek problema in barvanje predstavimo na pretersonovem grafu. \\ 
+\noindent Potek problema in barvanje predstavimo na Petersonovem grafu. \\ 
 Funkcija $barvanje\_po\_korakih$ zahteva tri argumente
 in sicer graf $G$, množico izvornih vozlišč $B$ ter $gasilci$, ki predstavlja število gasilcev, ki 
 bodo v vsaki časovni enoti gasili požar.
@@ -460,23 +454,25 @@ imamo $2$ gasilca, saj večje število gasilcev prej omeji požar.
 \pagebreak
 \section{Zaključek}
 
-V praksi najdemo več različic optimizacijskega problema gasilca. Na primer
-\textbf{širjenje bolezni} v manjši skupnosti, kjer z vozlišči grafa predstavimo ljudi 
-in s povezavami stike z drugimi. Če je vozlišče v grafu okuženo, ostane nalezljivo 
-za $A$ časovnih enot in lahko okuži sosede v tem časovnem okviru. Gasilce pa v tem
-primeru nadomestijo ukrepi proti širjenju (e.g. razkuževanje, nošenje mask,...). \\
-V igri \textbf{policistov in roparja} rešujemo problem, ali lahko $D$ policistov ujame roparja, ki se 
-premika po povezavah grafa. 
-Podobnost pa lahko najdemo tudi pri vzpostavljanju \textbf{komunikacijske mreže med člani uporniškega gibanja}
-tako, da se minimizira število izdaj članov. \\
-
-\noindent Delo najinega projekta zajema celoštevilski linearni program. Problema pa bi se lahko lotili še
+Delo najinega projekta zajema celoštevilski linearni program. Problema pa bi se lahko lotili še
 na kakšen drug način. V vsakem časovnem koraku iteracije bi lahko kot rešeno označili vozlišče z 
 največjo stopnjo. Tako bi preprečili, da, v primeru da zagori, bi se ogenj razširil na sosednja vozlišča
 le-tega. V nasprotnem primeru bi bila zajezitev požara težja. 
 S takim načinom bi potem morali pri testiranju pogledati razmerje med najvišjo stopnjo 
 grafa in časom. Vendar pa na tak način najverjetneje ne bi dobili najboljše
-rešitve, kot pri linearnem programu. 
+rešitve, kot pri linearnem programu. \\
+
+\noindent Ugotovili sva, da je algoritem za reševanje problema priročen
+za uporabo tudi na drugih primerih iz življenja. \\
+Na primer \textbf{širjenje bolezni} v manjši skupnosti, kjer z vozlišči grafa predstavimo ljudi 
+in s povezavami stike z drugimi. Če je vozlišče v grafu okuženo, ostane nalezljivo 
+$A$ časovnih enot in lahko okuži sosede v tem časovnem okviru. Gasilce v tem
+primeru nadomestijo ukrepi proti širjenju (e.g. razkuževanje, nošenje mask...). \\
+V igri \textbf{policistov in roparja} rešujemo problem, ali lahko $D$ policistov ujame roparja, ki se 
+premika po povezavah grafa. 
+Podobnost pa lahko najdemo tudi pri vzpostavljanju \textbf{komunikacijske mreže med člani uporniškega gibanja}
+tako, da se minimizira število izdaj članov. \\
+ 
 % \bibliographystyle{plain}
 % \bibliography{literatura}
 
