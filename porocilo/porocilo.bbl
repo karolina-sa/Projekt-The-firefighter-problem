@@ -1,0 +1,13 @@
+\begin{thebibliography}{1}
+
+\bibitem{fomin2015}
+Fedor~V. Fomin, Pinar Heggernes, and Erik~Jan van Leeuwen.
+\newblock The firefighter problem on graph classes.
+\newblock {\em Theoretical Computer Science}, 613:38--50, 2016.
+
+\bibitem{garcia2015}
+Carlos García-Martinez, Christian Blum, F.~J. Rodriguez, and Manuel Lozano.
+\newblock The firefighter problem: Empirical results on random graphs.
+\newblock {\em Computers \& Operations Research}, 60:55--66, 2015.
+
+\end{thebibliography}
