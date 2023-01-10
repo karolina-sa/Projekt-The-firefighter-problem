@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.3)  10 JAN 2023 11:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.3)  10 JAN 2023 16:26
 entering extended mode
 **"c:/Users/Uporabnik/OneDrive/Namizje/SOLA/3.letnik/FINANCNI PRAKTIKUM/Projekt-The-firefighter-problem/porocilo/porocilo.tex"
 ("c:/Users/Uporabnik/OneDrive/Namizje/SOLA/3.letnik/FINANCNI PRAKTIKUM/Projekt-The-firefighter-problem/porocilo/porocilo.tex"
@@ -771,196 +771,141 @@ Underfull \hbox (badness 10000) in paragraph at lines 154--161
  []
 
 [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 268--272
+Underfull \hbox (badness 10000) in paragraph at lines 270--275
 
  []
 
 <./slike/peterson0.png, id=138, 281.853pt x 268.8444pt>
 File: ./slike/peterson0.png Graphic file (type png)
 <use ./slike/peterson0.png>
-Package pdftex.def Info: ./slike/peterson0.png  used on input line 287.
+Package pdftex.def Info: ./slike/peterson0.png  used on input line 290.
 (pdftex.def)             Requested size: 140.92615pt x 134.42188pt.
 [6]
 <./slike/peterson1.png, id=145, 281.853pt x 268.8444pt>
 File: ./slike/peterson1.png Graphic file (type png)
 <use ./slike/peterson1.png>
-Package pdftex.def Info: ./slike/peterson1.png  used on input line 295.
+Package pdftex.def Info: ./slike/peterson1.png  used on input line 298.
 (pdftex.def)             Requested size: 140.92615pt x 134.42188pt.
 <./slike/peterson2.png, id=146, 281.853pt x 268.8444pt>
 File: ./slike/peterson2.png Graphic file (type png)
 <use ./slike/peterson2.png>
-Package pdftex.def Info: ./slike/peterson2.png  used on input line 303.
+Package pdftex.def Info: ./slike/peterson2.png  used on input line 306.
 (pdftex.def)             Requested size: 140.92615pt x 134.42188pt.
  [7 <./slike/peterson0.png> <./slike/peterson1.png> <./slike/peterson2.png>] [8]
 
 Package hyperref Warning: Composite letter `\textasciicaron+C'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 326.
+(hyperref)                removing `\textasciicaron' on input line 329.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 329--336
-
- []
-
-<./slike/D1.png, id=159, 409.0482pt x 279.6849pt>
-File: ./slike/D1.png Graphic file (type png)
-<use ./slike/D1.png>
-Package pdftex.def Info: ./slike/D1.png  used on input line 343.
-(pdftex.def)             Requested size: 90.0pt x 61.53513pt.
-<./slike/D2.png, id=160, 261.6174pt x 279.6849pt>
-File: ./slike/D2.png Graphic file (type png)
-<use ./slike/D2.png>
-Package pdftex.def Info: ./slike/D2.png  used on input line 344.
-(pdftex.def)             Requested size: 90.0pt x 96.21399pt.
-<./slike/D3.png, id=161, 307.1475pt x 279.6849pt>
-File: ./slike/D3.png Graphic file (type png)
-<use ./slike/D3.png>
-Package pdftex.def Info: ./slike/D3.png  used on input line 345.
-(pdftex.def)             Requested size: 90.0pt x 81.95154pt.
-<./slike/D4.png, id=162, 358.4592pt x 279.6849pt>
-File: ./slike/D4.png Graphic file (type png)
-<use ./slike/D4.png>
-Package pdftex.def Info: ./slike/D4.png  used on input line 346.
-(pdftex.def)             Requested size: 90.0pt x 70.21979pt.
-<./slike/D5.png, id=163, 308.5929pt x 279.6849pt>
-File: ./slike/D5.png Graphic file (type png)
-<use ./slike/D5.png>
-Package pdftex.def Info: ./slike/D5.png  used on input line 347.
-(pdftex.def)             Requested size: 90.0pt x 81.56744pt.
-<./slike/D6.png, id=164, 320.8788pt x 279.6849pt>
-File: ./slike/D6.png Graphic file (type png)
-<use ./slike/D6.png>
-Package pdftex.def Info: ./slike/D6.png  used on input line 348.
-(pdftex.def)             Requested size: 90.0pt x 78.44353pt.
-<./slike/D7.png, id=165, 288.3573pt x 279.6849pt>
-File: ./slike/D7.png Graphic file (type png)
-<use ./slike/D7.png>
-Package pdftex.def Info: ./slike/D7.png  used on input line 349.
-(pdftex.def)             Requested size: 90.0pt x 87.29462pt.
-<./slike/D8.png, id=166, 229.0959pt x 279.6849pt>
-File: ./slike/D8.png Graphic file (type png)
-<use ./slike/D8.png>
-Package pdftex.def Info: ./slike/D8.png  used on input line 350.
-(pdftex.def)             Requested size: 90.0pt x 109.87045pt.
-<./slike/D9.png, id=167, 291.9708pt x 279.6849pt>
-File: ./slike/D9.png Graphic file (type png)
-<use ./slike/D9.png>
-Package pdftex.def Info: ./slike/D9.png  used on input line 351.
-(pdftex.def)             Requested size: 90.0pt x 86.21063pt.
-<./slike/D10.png, id=168, 279.6849pt x 279.6849pt>
-File: ./slike/D10.png Graphic file (type png)
-<use ./slike/D10.png>
-Package pdftex.def Info: ./slike/D10.png  used on input line 352.
-(pdftex.def)             Requested size: 90.0pt x 90.0003pt.
-[9 <./slike/D1.png> <./slike/D2.png> <./slike/D3.png> <./slike/D4.png> <./slike/D5.png> <./slike/D6.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 356--357
+Underfull \hbox (badness 10000) in paragraph at lines 332--339
 
  []
 
-<./slike/cas.png, id=180, 411.2163pt x 341.8371pt>
+<./slike/cas.png, id=159, 409.7709pt x 341.8371pt>
 File: ./slike/cas.png Graphic file (type png)
 <use ./slike/cas.png>
-Package pdftex.def Info: ./slike/cas.png  used on input line 358.
-(pdftex.def)             Requested size: 164.4836pt x 136.7324pt.
-[10 <./slike/D7.png> <./slike/D8.png> <./slike/D9.png> <./slike/D10.png> <./slike/cas.png>]
-Overfull \hbox (10.38512pt too wide) in paragraph at lines 371--371
+Package pdftex.def Info: ./slike/cas.png  used on input line 341.
+(pdftex.def)             Requested size: 286.83768pt x 239.28432pt.
+[9 <./slike/cas.png>]
+Overfull \hbox (10.38512pt too wide) in paragraph at lines 356--356
 []\T1/lmr/bx/n/17.28 Testiranje pro-grama glede na ²te-vilo vo-z-li²£ grafa 
  []
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 371.
+(hyperref)                removing `\textasciicaron' on input line 356.
 
 
-Overfull \hbox (11.8223pt too wide) in paragraph at lines 375--379
+Overfull \hbox (11.8223pt too wide) in paragraph at lines 360--364
 \T1/lmr/m/n/12 Za iz-vedbo te-sti-ra-nja pro-grama sva spi-sali funk-cijo $\OML/lmm/m/it/12 seznam[]naborov[]st[]vozlisc[]cas$\T1/lmr/m/n/12 ,
  []
 
 
-Overfull \hbox (21.44173pt too wide) in paragraph at lines 375--379
+Overfull \hbox (21.44173pt too wide) in paragraph at lines 360--364
 \T1/lmr/m/n/12 ki kot ar-gu-mente sprejme $\OML/lmm/m/it/12 seznam[]imen[]grafov$\T1/lmr/m/n/12 , $\OML/lmm/m/it/12 st[]gasilcev$ \T1/lmr/m/n/12 ter $\OML/lmm/m/it/12 stevilo[]vozlic[]v[]B$\T1/lmr/m/n/12 .
  []
 
 
-Overfull \hbox (15.20866pt too wide) in paragraph at lines 390--390
+Overfull \hbox (15.20866pt too wide) in paragraph at lines 375--375
 []        \T1/lmtt/m/n/8 ''' funkcija, ki sprejme seznam v katerem so imena grafov, ²tevilo gasilcev ter ²tevilo vozli²£,[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 406--410
+Underfull \hbox (badness 10000) in paragraph at lines 391--395
 
  []
 
-[11]
-<./slike/plot12.png, id=194, 410.4936pt x 328.8285pt>
+[10]
+<./slike/plot12.png, id=169, 410.4936pt x 328.8285pt>
 File: ./slike/plot12.png Graphic file (type png)
 <use ./slike/plot12.png>
-Package pdftex.def Info: ./slike/plot12.png  used on input line 433.
+Package pdftex.def Info: ./slike/plot12.png  used on input line 418.
 (pdftex.def)             Requested size: 136.57634pt x 109.40685pt.
-<./slike/plot13.png, id=195, 396.0396pt x 328.8285pt>
+<./slike/plot13.png, id=170, 396.0396pt x 328.8285pt>
 File: ./slike/plot13.png Graphic file (type png)
 <use ./slike/plot13.png>
-Package pdftex.def Info: ./slike/plot13.png  used on input line 436.
+Package pdftex.def Info: ./slike/plot13.png  used on input line 421.
 (pdftex.def)             Requested size: 136.57634pt x 113.39577pt.
-<./slike/plot14.png, id=196, 396.0396pt x 328.8285pt>
+<./slike/plot14.png, id=171, 396.0396pt x 328.8285pt>
 File: ./slike/plot14.png Graphic file (type png)
 <use ./slike/plot14.png>
-Package pdftex.def Info: ./slike/plot14.png  used on input line 439.
+Package pdftex.def Info: ./slike/plot14.png  used on input line 424.
 (pdftex.def)             Requested size: 136.57634pt x 113.39577pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 450--453
+Underfull \hbox (badness 10000) in paragraph at lines 435--438
 
  []
 
-<./slike/plot22.png, id=197, 410.4936pt x 328.8285pt>
+<./slike/plot22.png, id=172, 410.4936pt x 328.8285pt>
 File: ./slike/plot22.png Graphic file (type png)
 <use ./slike/plot22.png>
-Package pdftex.def Info: ./slike/plot22.png  used on input line 465.
+Package pdftex.def Info: ./slike/plot22.png  used on input line 450.
 (pdftex.def)             Requested size: 136.57634pt x 109.40685pt.
-<./slike/plot23.png, id=198, 396.0396pt x 328.8285pt>
+<./slike/plot23.png, id=173, 396.0396pt x 328.8285pt>
 File: ./slike/plot23.png Graphic file (type png)
 <use ./slike/plot23.png>
-Package pdftex.def Info: ./slike/plot23.png  used on input line 468.
+Package pdftex.def Info: ./slike/plot23.png  used on input line 453.
 (pdftex.def)             Requested size: 136.57634pt x 113.39577pt.
-<./slike/plot24.png, id=199, 396.0396pt x 328.8285pt>
+<./slike/plot24.png, id=174, 396.0396pt x 328.8285pt>
 File: ./slike/plot24.png Graphic file (type png)
 <use ./slike/plot24.png>
-Package pdftex.def Info: ./slike/plot24.png  used on input line 471.
+Package pdftex.def Info: ./slike/plot24.png  used on input line 456.
 (pdftex.def)             Requested size: 136.57634pt x 113.39577pt.
-[12 <./slike/plot12.png> <./slike/plot13.png> <./slike/plot14.png> <./slike/plot22.png> <./slike/plot23.png> <./slike/plot24.png>] [13]
+[11 <./slike/plot12.png> <./slike/plot13.png> <./slike/plot14.png> <./slike/plot22.png> <./slike/plot23.png> <./slike/plot24.png>] [12]
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 494.
+(hyperref)                removing `\textasciicaron' on input line 479.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 508--518
+Underfull \hbox (badness 10000) in paragraph at lines 493--503
 
  []
 
-[14] ("c:/Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.bbl") [15]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 535.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 535.
+[13] ("c:/Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.bbl") [14]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 520.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 520.
  ("c:/Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 535.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 535.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 520.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 520.
 Package rerunfilecheck Info: File `porocilo.out' has not changed.
-(rerunfilecheck)             Checksum: 6A969106DFDC1A38F5040D680E4F46E2;954.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 535.
+(rerunfilecheck)             Checksum: 968630462D3A4BBB7CD2C12D061B112E;931.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 520.
  ) 
 Here is how much of TeX's memory you used:
- 26267 strings out of 480790
- 534026 string characters out of 2895425
- 824029 words of memory out of 3000000
- 41722 multiletter control sequences out of 15000+200000
+ 26194 strings out of 480790
+ 533071 string characters out of 2895425
+ 823977 words of memory out of 3000000
+ 41651 multiletter control sequences out of 15000+200000
  583927 words of font info for 57 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,8n,103p,1067b,517s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt8.pfb>
-Output written on "c:/Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.pdf" (15 pages, 1109132 bytes).
+Output written on "c:/Users\Uporabnik\OneDrive\Namizje\SOLA\3.letnik\FINANCNI PRAKTIKUM\Projekt-The-firefighter-problem\porocilo\porocilo.pdf" (14 pages, 403916 bytes).
 PDF statistics:
- 272 PDF objects out of 1000 (max. 8388607)
- 36 named destinations out of 1000 (max. 500000)
- 361 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 247 PDF objects out of 1000 (max. 8388607)
+ 34 named destinations out of 1000 (max. 500000)
+ 311 words of extra memory for PDF output out of 10000 (max. 10000000)
 

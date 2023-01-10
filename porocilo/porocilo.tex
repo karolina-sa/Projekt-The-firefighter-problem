@@ -157,9 +157,10 @@ nastavitvijo začetnega časa, $cas = 10$. V tem času je problem lahko
 končan ali ne. Če problem v tem času ni končan, torej rešitev ni končna, sva čas povečali za $10$ ter
 algoritem ponovili.
 Da je rešitev končna pomeni, da za vsako vozlišče, ki je zgorelo, velja, da je vsako sosednje
-vozlišče le-tega tudi zgorelo, ali pa bilo rešeno. \\
+vozlišče le-tega tudi zgorelo, ali pa že rešeno/pogašeno. \\
 
-\noindent Za število potrebnih časovnih korakov, da dobimo končno rešitev (torej se proces/situacija v naslednjih časih ne spreminja),
+\noindent Za število potrebnih časovnih korakov, da dobimo končno rešitev (torej da se proces/situacija 
+v naslednjih časih ne spreminja),
 sva napisali naslednjo funkcijo:
 
 \begin{scriptsize}
@@ -250,7 +251,8 @@ vozlišč grafa prikazuje širjenje in zajezevanje požara. Koda funkcije je nas
 \end{scriptsize}
 
 \noindent Funkcija $barvanje\_po\_korakih$ deluje s pomočjo funkcije $barvanje\_v\_casu\_t$, ki predstavlja
-situacijo v času t. Funkcijo si za lažje razumevanje poglejmo na konkretnem primeru.
+situacijo na grafu v času t, torej katera vozlišča so pogorela in katera zaščitena.
+ Funkcijo si za lažje razumevanje poglejmo na konkretnem primeru.
 
 \subsection{Primer na Petersonovem grafu}
 \noindent Potek problema in barvanje predstavimo na Petersonovem grafu. \\ 
@@ -268,7 +270,8 @@ Izberemo si naslednje:
 Imamo torej Petersonov graf, na katerem bo požar izbruhnil v vozliščih $1$ in $5$ in v vsaki časovni enoti ga bosta
 gasila dva gasilca. \\
 Opomba: množico vozlišč $B$ bi lahko izbrali tudi naključno in sicer s funkcijo, ki bo predstavljana
-v nadaljevanju, in za aragument prejme graf ter število vozlišč, ki bi radi da so izvor požara. \\
+v nadaljevanju, in za aragument prejme graf ter število vozlišč, ki bi radi da so izvor požara. 
+Vrne pa naključna vozlišča grafa. \\
 
 \noindent Če zaženemo
 \begin{small}
@@ -304,7 +307,7 @@ dobimo naslednje:
     \end{center}
 
 \noindent Funkcija $barvanje\_po\_korakih$ nam na začetku izpiše število potrebnih 
-časovnih korakov, ki ga izračuna z že predstavljeno funkcijo $cas\_potreben$. 
+časovnih korakov, ki jih izračuna z že predstavljeno funkcijo $cas\_potreben$. 
 Nato pa nam izriše situacijo v vsakem časovnem koraku:
 \begin{itemize}
     \item situacija \underline{v času $0$} so
@@ -323,46 +326,28 @@ Nato pa nam izriše situacijo v vsakem časovnem koraku:
 
 % ================================================================================================
 
-\section{Časovna zahtevnost na konkretnih primerih}
+\section{Časovna zahtevnost}
 \overfullrule=0pt
 
 Kot zanimivost sva s pomočjo \emph{Python} knjižnice \emph{timeit} generirali funkcijo, ki nam 
-vrne čas reševanja oziroma časovno zahtevnost funkcije $clp$, opisane v prvem poglavju. 
+vrne časovno zahtevnost funkcije $clp$, opisane v prvem poglavju. 
 Kot že znano, funkcija $clp$ sprejme tri argumente: graf, množico izvorov požara in
 število gasilcev. Funkciji sva podali poljuben graf, naključno vozlišče (eno samo) ter
 določili sva, da bo požar gasil samo en gasilec.
-Slednje sva naredili na desetih grafih z različnim številom vozlišč in dobili sva
-naslednje razultate: \\
+Slednje sva naredili na grafih s številom vozlišč iz množice $ \left\{ 6, 8, 10, 12, \ldots 98, 100 \right\} $.
+Dobljene rezultate sva predstavili v grafu: \\
 
 \begin{center}
-    \begin{longtable}{c|c|c}
-        število vozlišč & slika obravnavanega grafa & časovna zahtevnost \\ \hline
-        \endfirsthead \hline
-        število vozlišč & slika obravnavanega grafa & časovna zahtevnost \\
-        \endhead \endfoot \endlastfoot
-        5 & \includegraphics[width=90pt]{D1} & 1.0068004485219717e-06 \\ \hline
-        10 & \includegraphics[width=90pt]{D2} & 8.19600245449692e-07 \\ \hline
-        15 & \includegraphics[width=90pt]{D3} & 7.370006642304361e-07 \\ \hline
-        20 & \includegraphics[width=90pt]{D4} & 1.1784009984694422e-06 \\ \hline
-        25 & \includegraphics[width=90pt]{D5} & 9.944007615558803e-07 \\ \hline
-        30 & \includegraphics[width=90pt]{D6} & 6.845992174930871e-07 \\ \hline
-        35 & \includegraphics[width=90pt]{D7} & 1.2680000509135426e-06 \\ \hline
-        40 & \includegraphics[width=90pt]{D8} & 1.1128009646199644e-06 \\ \hline
-        45 & \includegraphics[width=90pt]{D9} & 9.780007530935108e-07 \\ \hline
-        50 & \includegraphics[width=90pt]{D10} & 1.3369994121603667e-06 \\ \hline
-    \end{longtable}
+    \includegraphics[scale=0.7]{cas}
 \end{center}
 
-Dobljene razultate predstavimo še na grafu: \\
-\begin{center}
-    \includegraphics[scale=0.4]{cas}
-\end{center}
-
-\noindent Opazimo, da čas reševanja grafa \underline{za naše primere} ni v nobeni relaciji s
-številom vozlišč.
-Predvidevamo pa lahko, da je čas reševanja v splošnem večji za grafe z večjim 
-številom vozlišč. To bi lahko s simulacijo tudi pokazale in sicer na podoben način
-kot sva izvedli testiranje v naslednjem poglavju. 
+\noindent Opazimo, da časovna zahtevnost reševanja funckije $clp$ za najine primere ni v očitni relaciji s
+številom vozlišč. Opaziti pa je, da se časovna zahtevnost vendarle počasi povečuje z večanjem števila vozlišč 
+grafa.
+Predvidevava, da je časovna zahtevnost v splošnem večja za grafe z večjim 
+številom vozlišč, saj je tudi število časovnih korakov do zaključenega problema v
+tem primeru večje. Predvidevanje bi lahko potrdile (ali ovrgle) s simulacijo, ki bi jo izvedle
+na podoben način kot testiranje v naslednjem poglavju. 
 
 \pagebreak
 
@@ -405,7 +390,7 @@ Koda funkcije:
 
 \noindent V funkciji sva si pomagali s funkcijo $nakljucno\_izberi\_vozlisca$, ki kot 
 argument sprejme poljuben graf $graf$ ter poljubno pozitivno število $n$. Funkcija vrne 
-$n$ poljubnih vozlišč $graf$-a. Namen funkcije je generirane naključne množice začetnih 
+$n$ poljubnih vozlišč $graf$-a. Namen funkcije pa je generiranje naključne množice začetnih 
 vozlišč $B$, saj požar lahko izbruhne kjerkoli. \\
 
 \noindent Funkcijo $seznam\_naborov\_st\_vozlisc\_cas$ sva izvedli na zelo velikem seznamu grafov. Grafi seznama
@@ -418,7 +403,7 @@ Ločili sva primera:
 \end{itemize}
 
 \noindent Iz dobljenih podatkov sva nato sestavili \emph{.csv} datoteko in podatke vizualzirali s pomočjo \emph{Python} knjižnice \emph{pandas}. 
-V grobem sva predstavlili odvisnost časa reševanje problema od števila vozlišč grafa. Število vozlišč obravnanih grafov
+V grobem sva predstavlili odvisnost časa reševanja problema od števila vozlišč grafa. Število vozlišč obravnanih grafov
 je med $6$ in $77$. Grafične prikaze sva nazadnje nadgradili še z linarno regresijo. 
 
 \pagebreak
@@ -520,9 +505,9 @@ rešitve, kot pri linearnem programu. \\
 \begin{itemize}
     \item potreben čas reševanje problema se na splošno linearno povečuje
             v odvisnosti od število vozlišč obravnavanega grafa,
-    \item čim več gasilcev gasi požar, čim prej bo problem končan
+    \item čim več gasilcev gasi požar, čim prej bo problem končan in
     \item čim večje je število izvorov požara, tem slabša bo rešitev linearnega problema 
-        (manj nepogorelih vozlišč)
+        (manj nepogorelih vozlišč).
 \end{itemize}
 
 \pagebreak
